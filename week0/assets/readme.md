@@ -38,7 +38,7 @@ $ git submodule update --init --recursive
 $ make 
 $ sudo make install
 ```
-![Alt Text](Screenshot (1140).png)
+![Alt Text](assets/Screenshot (1140).png)
 
 #### <ins>**Iverilog**</ins>
 ```bash
