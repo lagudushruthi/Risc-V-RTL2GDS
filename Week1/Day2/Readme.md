@@ -267,14 +267,12 @@ endmodule
 
 ## RTL Synthesis Optimizations
 
-### Constant & Power-of-Two Multiplications
-
 If your logic needs to multiply a signal by a constant power of two, synthesis can implement this **without extra hardware gates**:
 - Multiplying by 2: Simply shift left one bit (append `0`)
 - Multiplying by 4: Shift left two bits (append `00`)
 - Multiplying by 8: Shift left three bits (append `000`)
 
-### multiply with 2
+### multiply with 2 design
 **Example:**
 ``
 a(2:0) = 3'b010  `` ``
@@ -286,14 +284,14 @@ y = 2*a → 3'b0100 # Just append zero
        alt="multiply with 2" width="600"/>
 </p>
 
-### multiply with 9
+### multiply with 9 design
 **Example:**
 ``
 a*9 = y
 a*(8+1)
 a*8+a*1
 a000+a
-''
+``
  <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/mult_8_opt_netlist.PNG" 
        alt="multiply with 9" width="600"/>
