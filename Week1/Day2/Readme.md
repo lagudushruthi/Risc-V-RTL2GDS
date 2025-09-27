@@ -229,8 +229,8 @@ endmodule
 **Synthesis:**
 
    <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set_netlist.PNG" 
-       alt="Asynchronous Set D Flip-Flop netlist" width="600"/>
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_async_set_netlist.PNG" 
+       alt="Asynchronous Set D Flip-Flop synthesized schematic" width="600"/>
 </p>
 
 ### Synchronous Reset D Flip-Flop
