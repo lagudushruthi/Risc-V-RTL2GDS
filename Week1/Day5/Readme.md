@@ -12,10 +12,10 @@ Welcome to Day 5 of the RTL workshop! Today, we will cover optimization in Veril
   - [Lab 2: Synthesis Result of Lab 1](#lab-2-synthesis-result-of-lab-1)
   - [Lab 3: Nested If-Else](#lab-3-nested-if-else)
   - [Lab 4: Synthesis Result of Lab 3](#lab-4-synthesis-result-of-lab-3)
-  - [Lab 5: Complete Case Statement](#lab-5-complete-case-statement)
-  - [Lab 6: Synthesis Result of Lab 5](#lab-6-synthesis-result-of-lab-5)
-  - [Lab 7: Incomplete Case Handling](#lab-7-incomplete-case-handling)
-  - [Lab 8: Partial Assignments in Case](#lab-8-partial-assignments-in-case)
+  - [Lab 5: Incomplete Overlapping Case](#lab-5-incomplete-overlapping-case)
+  - [Lab 6: Complete Case Statement](#lab-6-complete-case-statement)
+  - [Lab 7: Synthesis Result of Lab 5](#lab-7-synthesis-result-of-lab-5)
+  - [Lab 8: Incomplete Case Handling](#lab-8-incomplete-case-handling)
 - [4. For Loops in Verilog](#4-for-loops-in-verilog)
 - [5. Generate Blocks in Verilog](#5-generate-blocks-in-verilog)
 - [6. What is an RCA (Ripple Carry Adder)?](#6-what-is-an-rca-ripple-carry-adder)
@@ -151,7 +151,40 @@ endmodule
 </p>
 ---
 
-### Lab 5: Complete Case Statement
+### Lab 5: Incomplete Overlapping Case
+
+```verilog
+module incomp_case (
+    input i0, input i1, input i2,
+    input [1:0] sel,
+    output reg y
+);
+always @(*) begin
+    case(sel)
+       2'b00 : y= i0;
+       2'b01 : y= i1;
+    endcase
+end
+endmodule
+```
+***Simulation:***
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/incomp_case.PNG" 
+       alt="Incomplete Overlapping Case" width="600"/>
+</p>
+
+***Synthesis:***
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/incomp_case_netlist.PNG" 
+       alt="Incomplete Case synthesis" width="600"/>
+</p>
+
+
+---
+
+### Lab 6: Complete Case Statement
 
 ```verilog
 module comp_case (input i0, input i1, input i2, input [1:0] sel, output reg y);
@@ -170,7 +203,7 @@ endmodule
 </p>
 ---
 
-### Lab 6: Synthesis Result of Lab 5
+### Lab 7: Synthesis Result of Lab 5
 
 <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/comp_case_netlist.PNG" 
@@ -179,7 +212,7 @@ endmodule
 
 ---
 
-### Lab 7: Incomplete Case Handling
+### Lab 8: Incomplete Case Handling
 
 ```verilog
 module bad_case (
@@ -220,34 +253,7 @@ endmodule
 </p>
 ---
 
-### Lab 8: Partial Assignments in Case
 
-```verilog
-module partial_case_assign (
-    input i0, input i1, input i2,
-    input [1:0] sel,
-    output reg y, output reg x
-);
-always @(*) begin
-    case(sel)
-        2'b00: begin
-            y = i0;
-            x = i2;
-        end
-        2'b01: y = i1;
-        default: begin
-            x = i1;
-            y = i2;
-        end
-    endcase
-end
-endmodule
-```
-![Screenshot_2025-05-28_12-39-30](https://github.com/user-attachments/assets/3f6068f3-726d-4192-b3cd-f88b3611e752)
-
-> **Note:** Steps to perform the above labs are shown in [Day 1](https://github.com/Ahtesham18112011/RTL_workshop/tree/main/Day_1).
-
----
 
 ## 4. For Loops in Verilog
 
