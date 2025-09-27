@@ -110,13 +110,18 @@ always @(*) begin
 end
 endmodule
 ```
-![in_comp_if](https://github.com/user-attachments/assets/91d1cc1d-bb3a-4ea8-a272-363414777868)
-
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/incomp_if.PNG" 
+       alt="Incomplete If Statement" width="600"/>
+</p>
 ---
 
 ### Lab 2: Synthesis Result of Lab 1
 
-![incomp_synth](https://github.com/user-attachments/assets/691045e7-39e0-4e6c-98bd-511b501fbe35)
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/incomp_if_netlist.PNG" 
+       alt="Incomplete If Statement synthesis" width="600"/>
+</p>
 
 ---
 
@@ -132,14 +137,18 @@ always @(*) begin
 end
 endmodule
 ```
-![icomp2](https://github.com/user-attachments/assets/2f614956-e4af-4d29-80ae-13a167e7831d)
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/incomp_if2.PNG" 
+       alt="Nested If-Else" width="600"/>
+</p>
 
 ---
 
 ### Lab 4: Synthesis Result of Lab 3
-
-![incomp2synth](https://github.com/user-attachments/assets/880ff7bb-23fb-4362-bf8f-a2494a854b53)
-
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/incomp_if2_netlist.PNG" 
+       alt="Nested If-Else synthesis" width="600"/>
+</p>
 ---
 
 ### Lab 5: Complete Case Statement
@@ -155,13 +164,18 @@ always @(*) begin
 end
 endmodule
 ```
-![compcase](https://github.com/user-attachments/assets/cfe97c45-a487-4f06-b4a2-74b3a61bee14)
-
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/comp_case.PNG" 
+       alt="Complete Case Statement" width="600"/>
+</p>
 ---
 
 ### Lab 6: Synthesis Result of Lab 5
 
-![compcase_synth](https://github.com/user-attachments/assets/8c871511-6e55-4e80-be11-86e9efd87cad)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/comp_case_netlist.PNG" 
+       alt="Complete Case Statement" width="600"/>
+</p>
 
 ---
 
@@ -183,8 +197,24 @@ always @(*) begin
 end
 endmodule
 ```
-![badcase](https://github.com/user-attachments/assets/4ccf37aa-5502-4750-bedb-9b2ec0748a53)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/bad_case.PNG" 
+       alt="Incomplete Case Statement" width="600"/>
+</p>
 
+***Synthesis:***
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/bad_case_netlist.PNG" 
+       alt="Incomplete Case Statement synthesis" width="600"/>
+</p>
+
+***Gate Level Simulation:***
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/bad_case_gls.PNG" 
+       alt="Incomplete Case Statement gls" width="600"/>
+</p>
 ---
 
 ### Lab 8: Partial Assignments in Case
@@ -298,8 +328,19 @@ always @(*) begin
 end
 endmodule
 ```
-![mux_generate](https://github.com/user-attachments/assets/80789638-c349-44a9-92f4-7597d5925c63)
+***Simulation:***
 
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/mux_generate.PNG" 
+       alt="mux_generate simulation" width="600"/>
+</p>
+
+***Synthesis:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/mux_generate_netlist.PNG" 
+       alt="mux_generate synthesis" width="600"/>
+</p>
 ---
 
 ### Lab 10: 8-to-1 Demux Using Case
@@ -328,8 +369,26 @@ always @(*) begin
 end
 endmodule
 ```
-![demux-case](https://github.com/user-attachments/assets/1836a255-e260-47de-9a8e-45899b19fc03)
+***Simulation:***
 
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/demux_case.PNG" 
+       alt="demux case simulation" width="600"/>
+</p>
+
+***Synthesis:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/demux_case_netlist.PNG" 
+       alt="demux case synthesis" width="600"/>
+</p>
+
+***Gate level Simulation:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/demux_case_gls.PNG" 
+       alt="demux case gls" width="600"/>
+</p>
 ---
 
 ### Lab 11: 8-to-1 Demux Using For Loop
@@ -353,8 +412,27 @@ always @(*) begin
 end
 endmodule
 ```
-![demux-generate](https://github.com/user-attachments/assets/a5a2c004-a16f-44cd-8d80-c23f1c932e6c)
 
+***Simulation:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/demux_generate.PNG" 
+       alt="demux generate simulation" width="600"/>
+</p>
+
+***Synthesis:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/demux_generate_netlist.PNG" 
+       alt="demux generate synthesis" width="600"/>
+</p>
+
+***Gate level Simulation:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/demux_generate_gls.PNG" 
+       alt="demux generate gls" width="600"/>
+</p>
 ---
 
 ### Lab 12: 8-bit Ripple Carry Adder with Generate Block
@@ -387,11 +465,28 @@ module fa (input a, input b, input c, output co, output sum);
     assign {co, sum} = a + b + c;
 endmodule
 ```
-![rca_org](https://github.com/user-attachments/assets/1d8876f9-e303-4a73-945e-97756a37bb73)
+***Simulation:***
 
----
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/rca.PNG" 
+       alt="rca simulation" width="600"/>
+</p>
 
-> **Note:** Steps to perform the above labs are already shown in [Day 1](https://github.com/Ahtesham18112011/RTL_workshop/tree/main/Day_1).
+***Synthesis:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/rca.PNG" 
+       alt="rca synthesis" width="600"/>
+</p>
+
+***Gate level Simulation:***
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/rca.PNG" 
+       alt="rca gls" width="600"/>
+</p>
+
+
 
 ---
 
