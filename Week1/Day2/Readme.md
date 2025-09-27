@@ -219,6 +219,7 @@ module dff_async_set (input clk, input async_set, input d, output reg q);
 endmodule
 ```
 - **Asynchronous set**: Overrides clock, setting q to 1 immediately.
+  
 **Simulation:**
    <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set.png" 
@@ -226,9 +227,10 @@ endmodule
 </p>
 
 **Synthesis:**
+
    <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set_netlist.PNG" 
-       alt="Asynchronous Set D Flip-Flop synthesized schematic" width="600"/>
+       alt="Asynchronous Set D Flip-Flop netlist" width="600"/>
 </p>
 
 ### Synchronous Reset D Flip-Flop
@@ -247,7 +249,7 @@ endmodule
   **Simulation:**
 
  <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_syn_reset.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_syn_reset.PNG" 
        alt="Synchronous Reset D Flip-Flop simulation" width="600"/>
 </p>
 
