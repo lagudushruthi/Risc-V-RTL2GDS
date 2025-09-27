@@ -113,7 +113,7 @@ endmodule
 
 ***Simulation:***
  <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day4/ternary_operator_mux.PNG" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day4/ternary_opertator_mux.PNG" 
        alt="ternary_operator_mux simulation" width="600"/>
 </p>
 
@@ -248,8 +248,8 @@ end
 ---
 ***Gate level Simulation:***
 <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day4/blocking_ceveat_gls.PNG" 
-       alt="blocking_ceveat_gls" width="600"/>
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day4/blocking_caveat_gls.PNG" 
+       alt="blocking_caveat_gls" width="600"/>
 </p>
 
 ## 5. Summary
