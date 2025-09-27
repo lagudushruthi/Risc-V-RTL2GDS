@@ -62,6 +62,7 @@ To open the sky130_fd_sc_hd__tt_025C_1v80.lib file:
    ```shell
    gedit sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
+ **Example:**
  <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/lib.png" 
        alt="sky130_lib" width="600"/>
@@ -86,7 +87,10 @@ To open the sky130_fd_sc_hd__tt_025C_1v80.lib file:
 - Reporting can require additional configuration.
 
 **Example:**
-![Screenshot_2025-05-29_19-04-48](https://github.com/user-attachments/assets/91f0244a-2c41-42ea-be6f-468880c3af33)
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/hierarchial design-multiple.png" 
+       alt="Hierarchial Design" width="600"/>
+</p>
 
 
 ---
@@ -107,7 +111,10 @@ To open the sky130_fd_sc_hd__tt_025C_1v80.lib file:
 
 **Example:**
 
-![Screenshot_2025-05-29_19-20-47](https://github.com/user-attachments/assets/e1d94a5d-d3f7-41ee-8e69-ca0c05be81a3)
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/flatten-multiple.png" 
+       alt="Flatten Design" width="600"/>
+</p>
 
 > **Important:** Hierarchical synthesis maintains sub-modules in the design, while flattening produces a netlist from the ground up.
 
@@ -143,35 +150,6 @@ endmodule
 ```
 - **Asynchronous reset**: Overrides clock, setting q to 0 immediately.
 - **Edge-triggered**: Captures d on rising clock edge if reset is low.
-
-### Asynchronous Set D Flip-Flop
-
-```verilog
-module dff_async_set (input clk, input async_set, input d, output reg q);
-  always @ (posedge clk, posedge async_set)
-    if (async_set)
-      q <= 1'b1;
-    else
-      q <= d;
-endmodule
-```
-- **Asynchronous set**: Overrides clock, setting q to 1 immediately.
-
-### Synchronous Reset D Flip-Flop
-
-```verilog
-module dff_syncres (input clk, input async_reset, input sync_reset, input d, output reg q);
-  always @ (posedge clk)
-    if (sync_reset)
-      q <= 1'b0;
-    else
-      q <= d;
-endmodule
-```
-- **Synchronous reset**: Takes effect only on the clock edge.
-
----
-
 ## Simulation and Synthesis Workflow
 
 ### Icarus Verilog Simulation
@@ -188,8 +166,10 @@ endmodule
    ```shell
    gtkwave tb_dff_asyncres.vcd
    ```
-![Screenshot_2025-05-30_10-45-13](https://github.com/user-attachments/assets/1176581e-fd6c-4b71-8af5-5d7d5f6dbcda)
-
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_reset.png" 
+       alt="Asynchronous Reset D Flip-Flop" width="600"/>
+</p>
 
 ### Synthesis with Yosys
 
@@ -199,11 +179,11 @@ endmodule
    ```
 2. Read Liberty library:
    ```shell
-   read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
 3. Read Verilog code:
    ```shell
-   read_verilog /path/to/dff_asyncres.v
+   read_verilog dff_asyncres.v
    ```
 4. Synthesize:
    ```shell
@@ -211,19 +191,65 @@ endmodule
    ```
 5. Map flip-flops:
    ```shell
-   dfflibmap -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
 6. Technology mapping:
    ```shell
-   abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
 7. Visualize the gate-level netlist:
    ```shell
    show
    ```
-![Screenshot_2025-05-30_11-03-00](https://github.com/user-attachments/assets/fa8337df-e0ec-4b01-9b18-5910768e4421)
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_reset_netlist.PNG" 
+       alt="Asynchronous Reset D Flip-Flop synthesized schematic" width="600"/>
+</p>
 
 
----
+### Asynchronous Set D Flip-Flop
+
+```verilog
+module dff_async_set (input clk, input async_set, input d, output reg q);
+  always @ (posedge clk, posedge async_set)
+    if (async_set)
+      q <= 1'b1;
+    else
+      q <= d;
+endmodule
+```
+- **Asynchronous set**: Overrides clock, setting q to 1 immediately.
+   <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set.png" 
+       alt="Asynchronous set D Flip-Flop" width="600"/>
+</p>
+   <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set_netlist.PNG" 
+       alt="Asynchronous Set D Flip-Flop synthesized schematic" width="600"/>
+</p>
+
+### Synchronous Reset D Flip-Flop
+
+```verilog
+module dff_syncres (input clk, input async_reset, input sync_reset, input d, output reg q);
+  always @ (posedge clk)
+    if (sync_reset)
+      q <= 1'b0;
+    else
+      q <= d;
+endmodule
+```
+- **Synchronous reset**: Takes effect only on the clock edge.
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_syn_reset.png" 
+       alt="Synchronous Reset D Flip-Flop simulation" width="600"/>
+</p>
+   <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_syn_reset_netlist.PNG" 
+       alt="Synchronous Reet D Flip-Flop synthesized schematic" width="600"/>
+</p>
+
+
 ## Summary
 This overview provides you with practical insights into timing libraries, synthesis strategies, and reliable coding practices for flip-flops. Continue experimenting with these concepts to deepen your understanding of RTL design and synthesis.
