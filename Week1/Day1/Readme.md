@@ -1,200 +1,244 @@
-#  Day 1: Introduction to Verilog RTL Design & Synthesis
+# 🚀 Day 1: RTL Simulation & Synthesis Lab
 
-Welcome to **Day 1** of the RTL Workshop!  
-Today, you'll embark on your journey into digital design by learning Verilog, open-source simulation with **Icarus Verilog (iverilog)**, and the basics of logic synthesis using **Yosys**. This guide will walk you through practical labs, essential concepts, and insightful explanations to help you build a strong foundation in RTL design.
-
----
-
-##  Table of Contents
-
-1. [What is a Simulator, Design, and Testbench?](#1-what-is-a-simulator-design-and-testbench)
-2. [Getting Started with iverilog](#2-getting-started-with-iverilog)
-3. [Lab: Simulating a 2-to-1 Multiplexer](#3-lab-simulating-a-2-to-1-multiplexer)
-4. [Verilog Code Analysis](#4-verilog-code-analysis)
-5. [Introduction to Yosys & Gate Libraries](#5-introduction-to-yosys--gate-libraries)
-6. [Synthesis Lab with Yosys](#6-synthesis-lab-with-yosys)
-7. [Summary](#7-summary)
+Welcome to the beginner-friendly guide for simulating and synthesizing RTL (Register Transfer Level) digital designs. The steps, explanations, and commands here make it easy for newcomers to use open-source EDA tools, debug hardware code, and understand the purpose of each tool in the design flow.
 
 ---
 
-## 1. What is a Simulator, Design, and Testbench?
+## 🎯 What is Simulation?
 
-###  Simulator
+Simulation allows hardware designers to **verify and visualize circuit functionality before fabrication**. Signals inside the design are displayed as waveforms—making it clear how the circuit responds to different input values.
 
-A **simulator** is a software tool that checks your digital circuit’s functionality by applying test inputs and viewing outputs. This helps you verify your design before hardware implementation.
+- **Simulator Tool:** [`iverilog`](https://bleyer.org/icarus/)
+- **Waveform Viewer:** [`GTKWave`](http://gtkwave.sourceforge.net/)
 
-###  Design
+Simulation involves two main code files:
+- **Design File:** Implements hardware logic (e.g., `good_mux.v`)
+- **Testbench File:** Applies stimuli (test vectors) to the design (e.g., `tb_good_mux.v`)
 
-The **design** is your Verilog code describing the intended logic functionality.
-
-###  Testbench
-
-A **testbench** is a simulation environment that applies various inputs to your design and checks if the outputs are correct.
-
-<div align="center">
-  <img src="./good_mux_netlist" alt="Design & Testbench Overview" width="70%">
-</div>
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/simulation_block_diagram.png" 
+       alt="Simulation Block Diagram" width="600"/>
+</p>
 
 ---
 
-## 2. Getting Started with iverilog
+## 🗂️ Cloning the Training Repository
 
-**iverilog** is an open-source simulator for Verilog. Here’s the typical simulation flow:
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/3ca190fb-cfa4-4abb-b9e1-0151b3c4bdba" alt="iverilog Simulation Flow" width="70%">
-</div>
-
-- Both the design and testbench are provided as input to iverilog.
-- The simulator produces a `.vcd` file for waveform viewing in GTKWave.
+1. **Clone the repository from GitHub:**
+    ```
+    git clone <repository_url>
+    cd sky180RTLDesignAndSynthesisWorkshop
+    ```
+2. **Navigate folders:**
+   - `lib/` contains standard cell libraries (e.g., `sky180_fd_sc_hd__tt_025C_1v80.lib`)
+   - `verilog_files/` contains example Verilog codes and testbenches
 
 ---
 
-## 3. Lab: Simulating a 2-to-1 Multiplexer
+## ▶️ Running the Simulation
 
-Let’s simulate a simple **2-to-1 multiplexer** using iverilog!
-
-###  Step 1: Clone the Workshop Repository
-
-```shell
-git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
-cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+**Step 1: Compile design and testbench**  
 ```
-
-###  Step 2: Install Required Tools
-
-```shell
-sudo apt install iverilog
-sudo apt install gtkwave
-```
-
-###  Step 3: Simulate the Design
-
-Compile the design and testbench:
-
-```shell
 iverilog good_mux.v tb_good_mux.v
 ```
 
-Run the simulation:
-
-```shell
+**Step 2: Run simulation to create waveform dump (.vcd)**  
+```
 ./a.out
 ```
 
-View the waveform:
-
-```shell
+**Step 3: View waves using GTKWave**  
+```
 gtkwave tb_good_mux.vcd
 ```
 
-<div align="center">
-  <img src="./good_mux_waveform.png" alt="GTKWave Example" width="70%">
-</div>
 
+
+Command to open both design and testbench files for debugging:
+> ```
+> vim tb_good_mux.v -o good_mux.v
+> ```
 
 ---
 
-## 4. Verilog Code Analysis
-
-**The code for the multiplexer (`good_mux.v`):**
-
+### Multiplexer Design code (`good_mux.v`)
 ```verilog
 module good_mux (input i0, input i1, input sel, output reg y);
-always @ (*)
+always @(*)
 begin
     if(sel)
         y <= i1;
-    else 
+    else
         y <= i0;
 end
 endmodule
 ```
 
-###  **How It Works**
-
-- **Inputs:** `i0`, `i1` (data), `sel` (select line)
+**My Understanding of How It Works:**
+- **Inputs:** `i0`, `i1` (data inputs), `sel` (select line)
 - **Output:** `y` (registered output)
-- **Logic:** If `sel` is 1, `y` gets `i1`; if `sel` is 0, `y` gets `i0`.
+- **Logic:** When `sel` is 1, `y` gets `i1`; when `sel` is 0, `y` gets `i0`
+
+### Testbench code (`tb_good_mux.v`)
+
+```verilog
+`timescale 1ns / 1ps
+module tb_good_mux;
+        // Inputs
+        reg i0,i1,sel;
+        // Outputs
+        wire y;
+
+        // Instantiate the Unit Under Test (UUT)
+        good_mux uut (
+                .sel(sel),
+                .i0(i0),
+                .i1(i1),
+                .y(y)
+        );
+
+        initial begin
+        $dumpfile("tb_good_mux.vcd");
+        $dumpvars(0,tb_good_mux);
+        // Initialize Inputs
+        sel = 0;
+        i0 = 0;
+        i1 = 0;
+        #300 $finish
+            end
+
+always #75 sel = ~sel;
+always #10 i0 = ~i0;
+always #55 i1 = ~i1;
+endmodule
+```
+
+I analyzed how the testbench instantiates the multiplexer and applies test vectors:
+- `sel` toggles every 75 time units
+- `i0` toggles every 10 time units  
+- `i1` toggles every 55 time units
+- My simulation ran for 300 time units
 
 ---
 
-## 5. Introduction to Yosys & Gate Libraries
+## My Simulation Results
+I captured my simulation waveform and saved it as `simulated_wavefrom.png`. The waveform clearly showed:
+- The select signal `sel` toggling every 75 time units
+- Input `i0` toggling every 10 time units  
+- Input `i1` toggling every 55 time units
+- Output `y` correctly following the multiplexer logic
 
-###  What is Yosys?
-
-**Yosys** is a powerful open-source synthesis tool for digital hardware. It takes your Verilog code and converts it into a gate-level netlist—a hardware blueprint.
-
-#### Yosys Features
-
-- **Synthesis:** Converts HDL to a logic circuit
-- **Optimization:** Improves speed or area
-- **Technology Mapping:** Matches logic to actual hardware cells
-- **Verification:** Checks correctness
-- **Extensibility:** Supports custom flows
-
-###  Why Do Libraries Have Different Gate "Flavors"?
-
-A `.lib` file contains many versions of each gate (like AND, OR, NOT) with different properties:
-
-- **Performance:** Faster gates for critical paths, slower for power savings
-- **Power:** Some gates use less energy
-- **Area:** Smaller gates for compact chips
-- **Drive Strength:** Stronger gates to drive more load
-- **Signal Integrity:** Specialized gates for noise/performance
-- **Mapping:** Synthesis tools pick the best flavor for your needs
+<p align="center">
+  <img src="https://github.com/vivek-kosigi/RTL2GDS_VSD/blob/main/Week_1/Day_1/simulated_wavefrom.png" 
+       alt="Simulated Wavefrom of MUX" width="600"/>
+</p>
 
 ---
 
-## 6. Synthesis Lab with Yosys
+## 🏗️ What is Synthesis?
 
-Let’s synthesize the `good_mux` design using Yosys!
+**Synthesis** is the process of **converting RTL (behavioral Verilog) into a gate-level netlist**—a format interpretable for chip fabrication. The *synthesizer* tool handles this translation.
 
-###  Step-by-Step Yosys Flow
+- **Synthesizer Tool:** [`Yosys`](https://yosyshq.net/yosys/)
+- **Inputs needed:**
+    - Design (`.v` file)
+    - Library (`.lib` file)
+    - (Optionally) Constraints (`.sdc` file)
+- **Output:** Technology-mapped netlist (`netlist.v`)
 
-1. **Start Yosys**
-    ```shell
-    yosys
-    ```
-
-2. **Read the liberty library**
-    ```shell
-    read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
-    ```
-
-3. **Read the Verilog code**
-    ```shell
-    read_verilog /home/vsduser/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/good_mux.v
-    ```
-
-4. **Synthesize the design**
-    ```shell
-    synth -top good_mux
-    ```
-
-5. **Technology mapping**
-    ```shell
-    abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
-    ```
-
-6. **Visualize the gate-level netlist**
-    ```shell
-    show
-    ```
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3" alt="Yosys Gate-level Schematic" width="70%">
-</div>
+<p align="center">
+  <img src="https://github.com/vivek-kosigi/RTL2GDS_VSD/blob/main/Week_1/Day_1/synthesis_block_diagram.png" 
+       alt="Synthesis Block Diagram" width="600"/>
+</p>
 
 ---
 
-## 7. Summary
+## 📦 The `.lib` Standard Cell Library
 
-- You learned about simulators, designs, and testbenches.
-- You ran your first Verilog simulation with iverilog and visualized waveforms.
-- You analyzed the 2-to-1 mux code.
-- You explored Yosys and learned why gate libraries have various flavors.
+A `.lib` file contains:
+- Definitions of digital cells (AND, OR, XOR, FF, etc.)
+- Timing info for different *process-voltage-temperature (PVT)* corners (slow, typical, fast)
+- Power and area estimates
+- Setup/hold times for reliable operation
 
+### Why Different Cell Speeds?
+
+- **Fast Cells:** Allow a design to run at a higher frequency (shorter delay); need for tight setup times. Consumes more power & area.
+- **Slow Cells:** Useful for meeting hold time (prevents signals from racing ahead); saves power & area, but increases delay.
+- **Typical Use:** Designers select a mix based on required performance & constraints.
 
 ---
 
+## 📝 Synthesis Flow (Yosys Examples)
+
+**1. Read the library file**  
+```shell
+read_liberty -lib ../lib/sky180_fd_sc_hd__tt_025C_1v80.lib
+```
+
+**2. Read your Verilog RTL code**  
+```shell
+read_verilog good_mux.v
+```
+
+**3. Synthesize with a defined top module**  
+```shell
+synth -top good_mux
+```
+
+**4. Map logic to standard cells (technology mapping)**  
+```shell
+abc -liberty ../lib/sky180_fd_sc_hd__tt_025C_1v80.lib
+```
+
+**5. Visualize the resulting netlist**  
+```shell
+show
+```
+
+**6. Write final netlist after synthesis**  
+```shell
+write_verilog good_mux_netlist.v  
+write_verilog -noattr good_mux_netlist.v # cleaner netlist
+```
+
+
+<p align="center">
+  <img src="https://github.com/vivek-kosigi/RTL2GDS_VSD/blob/main/Week_1/Day_1/synthesised_schematic.png" 
+       alt="Synthesised Diagram" width="600"/>
+</p>
+
+---
+
+## 🔂 Post-Synthesis Verification
+
+Just like RTL, **simulate the synthesized netlist** to ensure nothing broke during mapping.
+```
+iverilog  good_mux_netlist.v tb_good_mux.v
+./a.out
+gtkwave tb_good_mux.vcd
+```
+
+> If the waveforms match those from the RTL simulation, synthesis preserved functional correctness.
+
+---
+
+## ⚖️ Fast vs Slow Cells: Key Trade-offs
+
+| Cell Type   | How It’s Built     | What It’s For             | Pros          | Cons              |
+| ----------- | ----------------- | ------------------------- | ------------- | ----------------- |
+| Fast Cell   | Wider transistors | Fast logic, meets setup   | Speed         | More area, power  |
+| Slow Cell   | Narrower transistors | Eliminates races, meets hold | Lower power   | More delay        |
+
+- **Constraints** in `.sdc` files guide synthesizer choices for cell selection.
+
+---
+
+## ✅ Recap & Key Concepts
+
+- Simulation = verifies logic before hardware, using testvectors + waveform analysis
+- Synthesis = compiles RTL into technology-mapped gates, referencing `.lib` data
+- Fast vs Slow standard cells chosen based on setup/hold timing requirements
+- Always resimulate netlists to ensure functional consistency
+
+---
