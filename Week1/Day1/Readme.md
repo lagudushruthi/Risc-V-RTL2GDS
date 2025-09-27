@@ -16,7 +16,7 @@ Simulation involves two main code files:
 - **Testbench File:** Applies stimuli (test vectors) to the design (e.g., `tb_good_mux.v`)
 
 <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/simulation_block_diagram.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/simulation_block_diagarm.png" 
        alt="Simulation Block Diagram" width="600"/>
 </p>
 
@@ -129,7 +129,7 @@ I captured my simulation waveform and saved it as `simulated_wavefrom.png`. The 
 - Output `y` correctly following the multiplexer logic
 
 <p align="center">
-  <img src="https://github.com/vivek-kosigi/RTL2GDS_VSD/blob/main/Week_1/Day_1/simulated_wavefrom.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/good_mux_waveform.png" 
        alt="Simulated Wavefrom of MUX" width="600"/>
 </p>
 
@@ -147,7 +147,7 @@ I captured my simulation waveform and saved it as `simulated_wavefrom.png`. The 
 - **Output:** Technology-mapped netlist (`netlist.v`)
 
 <p align="center">
-  <img src="https://github.com/vivek-kosigi/RTL2GDS_VSD/blob/main/Week_1/Day_1/synthesis_block_diagram.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/synthesis_block_diagram.png" 
        alt="Synthesis Block Diagram" width="600"/>
 </p>
 
@@ -204,24 +204,13 @@ write_verilog -noattr good_mux_netlist.v # cleaner netlist
 
 
 <p align="center">
-  <img src="https://github.com/vivek-kosigi/RTL2GDS_VSD/blob/main/Week_1/Day_1/synthesised_schematic.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/good_mux_netlist.png" 
        alt="Synthesised Diagram" width="600"/>
 </p>
 
 ---
 
-## 🔂 Post-Synthesis Verification
 
-Just like RTL, **simulate the synthesized netlist** to ensure nothing broke during mapping.
-```
-iverilog  good_mux_netlist.v tb_good_mux.v
-./a.out
-gtkwave tb_good_mux.vcd
-```
-
-> If the waveforms match those from the RTL simulation, synthesis preserved functional correctness.
-
----
 
 ## ⚖️ Fast vs Slow Cells: Key Trade-offs
 
