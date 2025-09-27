@@ -246,6 +246,7 @@ end
        alt="blocking_caveat synthesis" width="600"/>
 </p>
 ---
+
 ***Gate level Simulation:***
 <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day4/blocking_caveat_gls.PNG" 
