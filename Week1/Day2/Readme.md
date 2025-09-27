@@ -88,7 +88,7 @@ To open the sky130_fd_sc_hd__tt_025C_1v80.lib file:
 
 **Example:**
  <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/hierarchial design-multiple.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/hierarchial design-mutliple.png" 
        alt="Hierarchial Design" width="600"/>
 </p>
 
@@ -219,11 +219,13 @@ module dff_async_set (input clk, input async_set, input d, output reg q);
 endmodule
 ```
 - **Asynchronous set**: Overrides clock, setting q to 1 immediately.
+**Simulation:**
    <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set.png" 
        alt="Asynchronous set D Flip-Flop" width="600"/>
 </p>
 
+**Synthesis:**
    <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set_netlist.PNG" 
        alt="Asynchronous Set D Flip-Flop synthesized schematic" width="600"/>
@@ -242,10 +244,14 @@ endmodule
 ```
 - **Synchronous reset**: Takes effect only on the clock edge.
 
+  **Simulation:**
+
  <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_syn_reset.png" 
        alt="Synchronous Reset D Flip-Flop simulation" width="600"/>
 </p>
+
+**Synthesis:**
    <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_syn_reset_netlist.PNG" 
        alt="Synchronous Reset D Flip-Flop synthesized schematic" width="600"/>
