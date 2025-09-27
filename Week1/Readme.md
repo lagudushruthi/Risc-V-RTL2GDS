@@ -20,26 +20,26 @@ This folder contains **5 days of hands-on learning**, exploring RTL simulation, 
 
 ## 📘 Day-wise Summary
 
-### 🚀 [Day1: RTL Simulation & Synthesis](./Day_1)
+### 🚀 [Day1: RTL Simulation & Synthesis](./Day1)
 - Learned **RTL simulation** with `iverilog` + `GTKWave`  
 - Created **design (`good_mux.v`)** and **testbench (`tb_good_mux.v`)**  
 - Performed **synthesis with Yosys**, understanding netlist generation  
 - Explored **.lib standard cells** and **fast vs slow cells**  
 - Verified post-synthesis functionality
 
-### 📚 [Day2: .lib Files, Hierarchy, Flip-Flops & RTL Optimizations](./Day_2)
+### 📚 [Day2: .lib Files, Hierarchy, Flip-Flops & RTL Optimizations](./Day2)
 - Explored **.lib files** and PVT corners for robust design  
 - Compared **hierarchical vs flat synthesis** in Yosys  
 - Implemented **different flip-flop coding styles** (async/sync reset)  
 - Learned RTL **optimization tricks** like power-of-two multiplication → shift-left
 
-### 🌟 [Day3: Combinational & Sequential Optimizations](./Day_3)
+### 🌟 [Day3: Combinational & Sequential Optimizations](./Day3)
 - Applied **constant propagation** and **Boolean simplification** in combinational circuits  
 - Optimized sequential logic: **state reduction, retiming, cloning**  
 - Ran labs (`opt_check*`, `diff_const*`, `counter_opt*`) to observe real hardware optimizations  
 - Understood **unused port pruning** and area/power reduction
 
-### 🛠️ [Day4: Gate-Level Simulation (GLS) & Synthesis-Simulation Mismatches](./Day_4)
+### 🛠️ [Day4: Gate-Level Simulation (GLS) & Synthesis-Simulation Mismatches](./Day4)
 - Performed **GLS using netlist.v** and testbench with `.lib` files  
 - Investigated common causes of simulation-synthesis mismatches:
   - Incomplete sensitivity lists (`always @(sel)` vs `always @(*)`)  
@@ -48,7 +48,7 @@ This folder contains **5 days of hands-on learning**, exploring RTL simulation, 
 - Ran labs on muxes and sequential designs to verify correct functionality  
 - Learned best practices for **synthesizable, simulation-consistent RTL**
 
-### ⚡ [Day5: Optimization in Synthesis](./Day_5)
+### ⚡ [Day5: Optimization in Synthesis](./Day5)
 - Learned how **incomplete if/else and case statements** cause **inferred latches**  
 - Explored **nested if-else, case statements, and default conditions** to avoid latches  
 - Implemented **for-loops** and **generate blocks** for scalable RTL design  
