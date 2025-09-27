@@ -265,7 +265,7 @@ endmodule
 
 ---
 
-## RTL Synthesis Optimizations
+## RTL Synthesis Optimization
 
 If your logic needs to multiply a signal by a constant power of two, synthesis can implement this **without extra hardware gates**:
 - Multiplying by 2: Simply shift left one bit (append `0`)
@@ -288,8 +288,11 @@ y = 2*a → 3'b0100 # Just append zero
 **Example:**
 ``
 a*9 = y
+
 a*(8+1)
+
 a*8+a*1
+
 a000+a
 ``
  <p align="center">
@@ -302,4 +305,4 @@ No need for resource-heavy multipliers—hardware gets optimized!
 
 
 ## Summary
-This overview provides you with practical insights into timing libraries, synthesis strategies, and reliable coding practices for flip-flops. Continue experimenting with these concepts to deepen your understanding of RTL design and synthesis.
+This overview provides you with practical insights into timing libraries, synthesis strategies, and reliable coding practices for flip-flops. Continue experimenting with these concepts to deepen your understanding of RTL design and synthesis.Modern tools perform constant propagation and left-shifting for power-of-two multiplication, eliminating wasteful hardware.
