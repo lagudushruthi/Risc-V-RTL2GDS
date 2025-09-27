@@ -16,7 +16,7 @@ Simulation involves two main code files:
 - **Testbench File:** Applies stimuli (test vectors) to the design (e.g., `tb_good_mux.v`)
 
 <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/simulation_block_diagarm.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day1/simulation_block_diagram.png" 
        alt="Simulation Block Diagram" width="600"/>
 </p>
 
