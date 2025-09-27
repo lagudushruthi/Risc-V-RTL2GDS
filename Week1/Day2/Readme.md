@@ -223,6 +223,7 @@ endmodule
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set.png" 
        alt="Asynchronous set D Flip-Flop" width="600"/>
 </p>
+
    <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_asyn_set_netlist.PNG" 
        alt="Asynchronous Set D Flip-Flop synthesized schematic" width="600"/>
@@ -247,7 +248,7 @@ endmodule
 </p>
    <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day2/dff_syn_reset_netlist.PNG" 
-       alt="Synchronous Reet D Flip-Flop synthesized schematic" width="600"/>
+       alt="Synchronous Reset D Flip-Flop synthesized schematic" width="600"/>
 </p>
 
 
