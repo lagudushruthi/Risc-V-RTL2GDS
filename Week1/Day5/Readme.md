@@ -197,6 +197,9 @@ always @(*) begin
 end
 endmodule
 ```
+
+***Simulation:***
+
 <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/bad_case.PNG" 
        alt="Incomplete Case Statement" width="600"/>
@@ -303,7 +306,10 @@ endgenerate
 
 An RCA adds binary numbers using a chain of full adders. To add `n` bits, you need `n` full adders. Each carry-out connects to the carry-in of the next stage.
 
-![image](https://github.com/user-attachments/assets/f1ec27d4-b770-4d7a-a418-6435fc81f538)
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/Ripple_carry_adder.png" 
+       alt="Ripple carry adder" width="600"/>
+</p>
 
 ---
 
@@ -485,8 +491,6 @@ endmodule
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week1/Day5/rca.PNG" 
        alt="rca gls" width="600"/>
 </p>
-
-
 
 ---
 
