@@ -12,7 +12,7 @@ Welcome to Day 3 of this workshop! Today we discuss optimization of combinationa
 - [4. Retiming](#4-retiming)
 - [5. Labs on Optimization](#5-labs-on-optimization)
   - [Combinational Optimization](#combinational-optimization)
-  - [Sequential Optimization](#sequential -optimization)
+  - [Sequential Optimization](#sequential-optimization)
   - [Optimization of unused ports](#optimization-of-unused-ports)
 
 ---
