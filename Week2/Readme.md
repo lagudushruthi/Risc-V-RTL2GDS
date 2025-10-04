@@ -1,4 +1,4 @@
-# BabySoC Fundamentals & Functional Modelling
+# Fundamentals of SoC Design
 
 ## Objective
 
@@ -35,32 +35,23 @@ A System-on-Chip, or SoC, is essentially a complete computer system miniaturized
 - **Microprocessor-based**: Power demanding, multitasking gadgets like smartphones and tablets.
 - **Application-Specific**: Customized for dedicated high-performance tasks (e.g., AI or graphics cards).
 
-## SoC Design Flow
-Designing an SoC is a detailed, step-by-step process to bring together many components onto one chip. Here is an approachable look at the typical design flow:
-
-# SoC Design Flow Documentation
-
-This document describes the full design flow of a System-on-Chip (SoC), providing a clear, visual, and written overview from concept to mass production.
-
 ---
 
 ## SoC Design Flow Overview
 
-The SoC design process is a structured, iterative sequence that ensures robust, efficient, and manufacturable chip solutions. It is generally divided into Front-End (hardware design) and Software Development tracks, which are closely integrated to ensure that the final product works as a single, unified system.
+Designing an SoC is a detailed, step-by-step process to bring together many components onto one chip. Here is an approachable look at the typical design flow:
+It is generally divided into Front-End (hardware design) and Software Development tracks, which are closely integrated to ensure that the final product works as a single, unified system.
 
----
 
 ## 1. SoC Specification
 
 The journey begins by clearly defining objectives, performance requirements, interfaces, and constraints for the proposed SoC. The specification sets the foundation for all subsequent design choices.
 
----
 
 ## 2. Architecture Design (Hardware/Software Partitioning)
 
 At this point, decisions are made about which system elements will be implemented in hardware and which in software. This architectural blueprint ensures maximum performance and cost-efficiency.
 
----
 
 ## Front-End Design (Hardware)
 
@@ -84,7 +75,6 @@ RTL code is synthesized into a detailed gate-level netlist. Design for Testabili
 
 The netlist serves as the physical circuit blueprint for further implementation.
 
----
 
 ## Physical Design (Back-End)
 
@@ -116,15 +106,11 @@ Early silicon is tested under real-world conditions, and hardware-software integ
 
 Fully validated chips enter volume manufacturing.
 
----
-
 ## Software Development Flow
 
 - **Software Development:** Code like drivers, operating system support, and applications are created in parallel with hardware progress.
 - **Software Testing and Refinement:** Continual testing and refinement ensure compatibility with evolving hardware.
 - **Final Code:** Mature software is integrated after thorough verification.
-
----
 
 ## HW/SW Co-Simulation and Integration
 
@@ -143,7 +129,6 @@ Hardware and software are co-simulated throughout the process to ensure system-l
 By systematically iterating through specification, design, verification, and integration—using both hardware and software co-simulation—the SoC design flow greatly increases the chances of building a robust, high-performing, and manufacturable chip.
 
 
-
 ---
 
 ## VSDBabySoC Architecture
@@ -153,18 +138,16 @@ VSDBabySoC is a compact, open-source SoC built around the RISC-V RVMYTH processo
 ### Key Modules
 
 - **RVMYTH (RISC-V CPU)**
-  - The heart of BabySoC, RVMYTH implements a reduced instruction set computing (RISC) architecture. RISC-V is celebrated for its simplicity and extensibility,   allowing customization and rapid innovation. Core features include a load-store approach to memory access and a minimal instruction set. RVMYTH continuously cycles the r17 register to hold output data, providing values for peripheral modules. Its design prioritizes energy efficiency and predictable execution, both crucial for embedded systems.
-  - Implements a reduced instruction set, emphasizing efficiency and extensibility.
-  - Handles program execution and cycles output values via the `r17` register.
+  - The heart of BabySoC, RVMYTH implements a reduced instruction set computing (RISC) architecture.
+  - Core features include a load-store approach to memory access and a minimal instruction set.
+  - RVMYTH continuously cycles the r17 register to hold output data, providing values for peripheral modules.
     
 - **Phase-Locked Loop (PLL)**
-  - BabySoC incorporates an 8x PLL, which generates stable, synchronized clock signals. PLLs are central to modern SoCs because they minimize clock jitter and allow multiple subsystems to operate at optimal frequencies. The PLL compares an input reference signal to its output, tunes a voltage-controlled oscillator until lock is achieved, and distributes clock signals system-wide. This tight timing coordination reduces errors and enables reliable communication between CPU, memory, and peripherals.
   - Provides precision clock signals synchronized to a reference input.
   - Minimizes jitter and timing errors, ensuring all system blocks operate harmoniously.
   - Essential for high-speed and reliable communication between chip modules.
 
 - **10-bit Digital-to-Analog Converter (DAC)**
-  - The 10-bit DAC in BabySoC converts digital data specifically, the values from RVMYTH—into physical voltage levels. The DAC’s architecture typically uses a network of resistors (weighted resistor or R-2R ladder designs), and handles 1024 discrete values from the CPU. This analog output enables BabySoC to interface directly with devices accepting analog signals, such as speakers or televisions, demonstrating multimedia capabilities.
   - Converts digital output from the CPU into 1024 distinct analog voltage levels.
   - Facilitates direct interfacing with analog hardware, such as speakers or displays.
   - Demonstrates real multimedia output from a digital core.
@@ -177,12 +160,6 @@ VSDBabySoC is a compact, open-source SoC built around the RISC-V RVMYTH processo
 
 ---
 
-## Detailed Integration and Engineering Insights
-
-- **Clock Synchronization:** An on-chip PLL is more reliable than external clocks, reducing signal distribution delays and inaccuracies.
-- **Digital to Analog Bridging:** A native DAC translates fast digital computations into precise analog signals, enabling applications in audio, video, and instrumentation.
-- **Modular Design:** Open-source cores and clearly separated subsystems allow easy extension, customization, and experimentation.
-- **RISC-V Flexibility:** RVMYTH's lightweight, open architecture encourages rapid development and protocol adaptation without licensing constraints.
 
 
 
