@@ -217,8 +217,6 @@ VSDBabySoC/
    ````
    sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 
-  
-
 2. **Compilation and Simulation**
     ```
     mkdir -p output/pre_synth_sim
@@ -241,12 +239,22 @@ VSDBabySoC/
 ---
 
 ## Terminal Output
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim_terminal.png" 
+       alt="pre_synth_sim_terminal" width="600"/>
+</p>
+
+> *Shows successful compilation, simulation, and GTKWave GUI launch.*
+
+## Simulation Waveform
+
 <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim.png" 
        alt="pre_synth_sim" width="600"/>
 </p>
 
-> *Shows successful compilation, simulation, and GTKWave GUI launch.*
+
 
 ---
 
@@ -272,7 +280,7 @@ VSDBabySoC/
 </p>
 
 
-> *Regular clock cycles (`CLK`) and correct period demonstrate proper synchronous operation of SoC modules.*
+> *This screenshot shows multiple periods of the CLK signal, demonstrating a stable and regular clock waveform with a period of approximately 35.4 ns. Various output and data signals (such as OUT and TO_DAC) change in synchronization with the clock's rising edge, verifying that all logic in the BabySoC operates synchronously according to the clock.*
 
 ---
 
