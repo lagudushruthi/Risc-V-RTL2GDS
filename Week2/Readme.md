@@ -241,7 +241,7 @@ VSDBabySoC/
 ## Terminal Output
 
 <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim_terminal.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim_terminal.PNG" 
        alt="pre_synth_sim_terminal" width="600"/>
 </p>
 
