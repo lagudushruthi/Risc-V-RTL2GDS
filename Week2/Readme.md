@@ -1,8 +1,8 @@
 ## Contents
-- [Fundamentals of SoC Design](#Fundamentals-of-SoC-Design)
-- [VSDBabySoC Project Pre_synth_sim](#VSDBabySoC-Project-Pre_synth_sim)
+- [Task1-Fundamentals of SoC Design](#Task1-Fundamentals-of-SoC-Design)
+- [Task2-VSDBabySoC Project Pre_synth_sim](#Task2-VSDBabySoC-Project-Pre_synth_sim)
 
-# Fundamentals of SoC Design
+# Task1-Fundamentals of SoC Design
 
 ## Objective
 
@@ -167,7 +167,7 @@ VSDBabySoC is a compact, open-source SoC built around the RISC-V RVMYTH processo
 
 ---
 
-# VSDBabySoC Project Pre_synth_sim
+# Task2-VSDBabySoC Project Pre_synth_sim
 
 ## Objective
 
@@ -217,7 +217,7 @@ VSDBabySoC/
    ````
    sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 
-   ```
+  
 
 2. **Compilation and Simulation**
     ```
@@ -241,7 +241,10 @@ VSDBabySoC/
 ---
 
 ## Terminal Output
-
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim.png" 
+       alt="pre_synth_sim" width="600"/>
+</p>
 
 > *Shows successful compilation, simulation, and GTKWave GUI launch.*
 
@@ -251,12 +254,22 @@ VSDBabySoC/
 
 ### Reset Operation
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim_reset.png" 
+       alt="pre_synth_sim_reset" width="600"/>
+</p>
+
 
 > *Outputs are initialized during reset (`reset=1`). Once reset is de-asserted, signals show active values, confirming correct design initialization.*
 
 ---
 
 ### Clock Behavior
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim_clock.jpg" 
+       alt="pre_synth_sim_clock" width="600"/>
+</p>
 
 
 > *Regular clock cycles (`CLK`) and correct period demonstrate proper synchronous operation of SoC modules.*
@@ -265,6 +278,10 @@ VSDBabySoC/
 
 ### Data Flow Between Modules
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/pre_synth_sim_dataflow.png" 
+       alt="pre_synth_sim_dataflow" width="600"/>
+</p>
 
 > *Transition of `TO_DAC[9:0]` from the core to the DAC followed by change in `OUT`, shows proper data movement.*
 > *Values in register r17 change as operations proceed, confirming register writes and correct core behavior.*
