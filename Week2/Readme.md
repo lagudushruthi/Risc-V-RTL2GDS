@@ -167,6 +167,111 @@ VSDBabySoC is a compact, open-source SoC built around the RISC-V RVMYTH processo
 
 ---
 
+# VSDBabySoC Project Pre_synth_sim
+
+## Objective
+
+To understand SoC fundamentals and demonstrate BabySoC functional modelling using Icarus Verilog and GTKWave simulation tools.
+
+---
+## Project Structure
+- `src/include/` - Contains header files (`*.vh`) with necessary macros or parameter definitions.
+- `src/module/` - Contains Verilog files for each module in the SoC design.
+- `output/` - Directory where compiled outputs and simulation files will be generated.
+
+## Set-up Guide
+Clone or set up the directory structure as follows:
+```txt
+VSDBabySoC/
+├── src/
+│   ├── include/
+│   │   ├── sandpiper.vh
+│   │   └── other header files...
+│   ├── module/
+│   │   ├── vsdbabysoc.v      # Top-level module integrating all components
+│   │   ├── rvmyth.v          # RISC-V core module
+│   │   ├── avsdpll.v         # PLL module
+│   │   ├── avsddac.v         # DAC module
+│   │   └── testbench.v       # Testbench for simulation
+└── output/
+        ├── pre_synth_sim
+        └── pre_synth_sim.out
+        
+
+## Workflow
+
+1. **Cloning the Project**
+    ```
+    git clone https://github.com/manili/VSDBabySoC.git
+    ```
+
+2. **Convert rvmyth.tvl to rvmyth.v using sandpiper-saas**
+   ```
+   sudo apt install python3-venv python3-pip
+   python3 -m venv sp_env
+   source sp_env/bin/activate
+   pip install pyyaml click sandpiper-saas
+   # Convert from .tlv to .v
+   sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
+   ```
+
+2. **Compilation and Simulation**
+    ```
+    mkdir -p output/pre_synth_sim
+    
+    iverilog -o output/pre_synth_sim/pre_synth_sim.out \
+      -DPRE_SYNTH_SIM \
+      -I src/include -I src/module/ \
+      src/module/testbench.v
+    cd output/pre_synth_sim
+    
+    ./pre_synth_sim.out
+    ```
+
+3. **Launching GTKWave**
+    ```
+    gtkwave pre_synth_sim.vcd
+    ```
+
+---
+
+## Terminal Output
+
+![Terminal Output](images/terminal_output.jpg)
+> *Shows successful compilation, simulation, and GTKWave GUI launch.*
+
+---
+
+## Simulation Analysis
+
+### Reset Operation
+
+![Reset Operation](images/pre_synth_sim_reset.jpg)
+> *Outputs are initialized during reset (`reset=1`). Once reset is de-asserted, signals show active values, confirming correct design initialization.*
+
+---
+
+### Clock Behavior
+
+![Clock Signal](images/clock_waveform.jpg)
+> *Regular clock cycles (`CLK`) and correct period demonstrate proper synchronous operation of SoC modules.*
+
+---
+
+### Data Flow Between Modules
+
+![Data Flow](images/data_flow.jpg)
+> *Transition of `TO_DAC[9:0]` from the core to the DAC followed by change in `OUT`, shows proper data movement.*
+> *Values in register r17 change as operations proceed, confirming register writes and correct core behavior.*
+
+---
+
+## Summary
+
+All steps from testbench compilation to functional waveform analysis are verified, showing correct BabySoC SoC reset, clocking, module interfacing, and register operations.
+
+
+
 
 
 
