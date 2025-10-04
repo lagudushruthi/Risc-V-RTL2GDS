@@ -196,8 +196,8 @@ VSDBabySoC/
 └── output/
         ├── pre_synth_sim
         └── pre_synth_sim.out
-        
-
+```
+---
 ## Workflow
 
 1. **Cloning the Project**
@@ -206,13 +206,17 @@ VSDBabySoC/
     ```
 
 2. **Convert rvmyth.tvl to rvmyth.v using sandpiper-saas**
+
    ```
    sudo apt install python3-venv python3-pip
    python3 -m venv sp_env
    source sp_env/bin/activate
    pip install pyyaml click sandpiper-saas
-   # Convert from .tlv to .v
+   ```
+   ***Convert from .tlv to .v***
+   ````
    sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
+
    ```
 
 2. **Compilation and Simulation**
@@ -229,6 +233,7 @@ VSDBabySoC/
     ```
 
 3. **Launching GTKWave**
+
     ```
     gtkwave pre_synth_sim.vcd
     ```
@@ -237,7 +242,7 @@ VSDBabySoC/
 
 ## Terminal Output
 
-![Terminal Output](images/terminal_output.jpg)
+
 > *Shows successful compilation, simulation, and GTKWave GUI launch.*
 
 ---
@@ -246,21 +251,21 @@ VSDBabySoC/
 
 ### Reset Operation
 
-![Reset Operation](images/pre_synth_sim_reset.jpg)
+
 > *Outputs are initialized during reset (`reset=1`). Once reset is de-asserted, signals show active values, confirming correct design initialization.*
 
 ---
 
 ### Clock Behavior
 
-![Clock Signal](images/clock_waveform.jpg)
+
 > *Regular clock cycles (`CLK`) and correct period demonstrate proper synchronous operation of SoC modules.*
 
 ---
 
 ### Data Flow Between Modules
 
-![Data Flow](images/data_flow.jpg)
+
 > *Transition of `TO_DAC[9:0]` from the core to the DAC followed by change in `OUT`, shows proper data movement.*
 > *Values in register r17 change as operations proceed, confirming register writes and correct core behavior.*
 
