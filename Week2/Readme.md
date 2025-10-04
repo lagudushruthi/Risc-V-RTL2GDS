@@ -42,6 +42,11 @@ A System-on-Chip, or SoC, is essentially a complete computer system miniaturized
 Designing an SoC is a detailed, step-by-step process to bring together many components onto one chip. Here is an approachable look at the typical design flow:
 It is generally divided into Front-End (hardware design) and Software Development tracks, which are closely integrated to ensure that the final product works as a single, unified system.
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/SoC design flow.png" 
+       alt="SoC design flow" width="600"/>
+</p>
+
 
 ## 1. SoC Specification
 
@@ -116,13 +121,6 @@ Fully validated chips enter volume manufacturing.
 
 Hardware and software are co-simulated throughout the process to ensure system-level consistency, catch interface mismatches early, and enable smooth integration at the end.
 
----
-
-## Diagram
-
-
-
----
 
 ## Summary
 
@@ -134,6 +132,11 @@ By systematically iterating through specification, design, verification, and int
 ## VSDBabySoC Architecture
 
 VSDBabySoC is a compact, open-source SoC built around the RISC-V RVMYTH processor core. It is designed to demonstrate digital-analog co-design and seamless integration of modern SoC features.
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week2/VSDBabySoC.png" 
+       alt="VSDBabySoC" width="600"/>
+</p>
 
 ### Key Modules
 
