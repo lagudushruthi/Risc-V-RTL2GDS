@@ -33,11 +33,11 @@ This repository documents my **week-by-week progress** with tasks inside each we
 
 | Task       | Description                                                                 | Status |
 | ---------- | --------------------------------------------------------------------------- | ------ |
-| [**Day1**]([Day1: RTL Simulation & Synthesis](./Day1)) | MUX synthesis in Yosys, Sky130 mapping, GLS netlist generation         | ✅ Done |
-| [**Day2**]([Day2: .lib Files, Hierarchy, Flip-Flops & RTL Optimizations](./Day2)) | Constant DFF mapping + GLS validation          | ✅ Done |
-| [**Day3**]([Day3: Combinational & Sequential Optimizations](./Day3)) | MUX using `for-generate`, RTL vs GLS verification                       | ✅ Done |
-| [**Day4**]([Day4: Gate-Level Simulation (GLS) & Synthesis-Simulation Mismatches](./Day4))| DEMUX using `generate`, RTL vs GLS verification                         | ✅ Done |
-| [**Day5**]([Day5: Optimization in Synthesis](./Day5)) | Ripple Carry Adder synthesis & GLS validation                           | ✅ Done |
+| [**Day1**]([RTL Simulation & Synthesis](./Day1)) | MUX synthesis in Yosys, Sky130 mapping, GLS netlist generation         | ✅ Done |
+| [**Day2**]([.lib Files, Hierarchy, Flip-Flops & RTL Optimizations](./Day2)) | Constant DFF mapping + GLS validation          | ✅ Done |
+| [**Day3**]([Combinational & Sequential Optimizations](./Day3)) | MUX using `for-generate`, RTL vs GLS verification                       | ✅ Done |
+| [**Day4**]([Gate-Level Simulation & Synthesis-Simulation Mismatches](./Day4))| DEMUX using `generate`, RTL vs GLS verification                         | ✅ Done |
+| [**Day5**]([Optimization in Synthesis](./Day5)) | Ripple Carry Adder synthesis & GLS validation                           | ✅ Done |
 
 
 ## 📅 Week 2 — Fundamentals of SoC Design
