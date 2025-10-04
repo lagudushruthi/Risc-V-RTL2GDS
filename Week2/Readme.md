@@ -1,3 +1,7 @@
+## Contents
+- [Fundamentals of SoC Design](#Fundamentals-of-SoC-Design)
+- [VSDBabySoC Project Pre_synth_sim](#VSDBabySoC-Project-Pre_synth_sim)
+
 # Fundamentals of SoC Design
 
 ## Objective
