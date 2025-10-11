@@ -110,19 +110,28 @@ synth -top vsdbabysoc
 
 ### **Step 4: Map D Flip-Flops to Standard Cells**
 ```yosys
-dfflibmap -liberty /home/ananya123/VSDBabySoCC/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
-![WhatsApp Image 2024-11-16 at 5 20 23 AM (7)](https://github.com/user-attachments/assets/566b121d-a5da-47c2-a09b-1660592569c5)
-
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis11.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 ---
 
 ### **Step 5: Perform Optimization and Technology Mapping**
 ```yosys
 opt
-abc -liberty /home/ananya123/VSDBabySoCC/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
+abc -liberty ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
 ```
-![WhatsApp Image 2024-11-16 at 5 20 23 AM (6)](https://github.com/user-attachments/assets/5657a167-e0e2-431a-882e-4a785b059b5d)
-![WhatsApp Image 2024-11-16 at 5 20 23 AM (5)](https://github.com/user-attachments/assets/a0ab61ba-24dc-4b9b-83fa-eb5b78f79f40)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis12.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis13.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
 ---
 
@@ -133,7 +142,10 @@ setundef -zero
 clean -purge
 rename -enumerate
 ```
-![WhatsApp Image 2024-11-16 at 5 20 23 AM (4)](https://github.com/user-attachments/assets/e2fd7bc4-5e8a-4236-84dc-002887f3eb82)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis14.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
 ---
 
@@ -141,17 +153,30 @@ rename -enumerate
 ```yosys
 stat
 ```
-![WhatsApp Image 2024-11-16 at 5 20 23 AM (3)](https://github.com/user-attachments/assets/292c9093-9a6d-417e-b094-0b8a6e27e7c3)
-![WhatsApp Image 2024-11-16 at 5 20 23 AM (2)](https://github.com/user-attachments/assets/ce8ad45b-92ae-4cc8-a4dd-0f52028e078e)
-![WhatsApp Image 2024-11-16 at 5 20 23 AM (1)](https://github.com/user-attachments/assets/e1741767-2b83-4d88-909e-e5d4c73411f4)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis15.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis16.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis17.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 ---
 
 ### **Step 8: Write the Synthesized Netlist**
 ```yosys
-write_verilog -noattr /home/ananya123/VSDBabySoCC/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
+write_verilog -noattr ./output/post_synth_sim/vsdbabysoc.synth.v
 ```
-![WhatsApp Image 2024-11-16 at 5 20 23 AM](https://github.com/user-attachments/assets/1e0444b4-ad66-4798-b7f7-7bc1e13cf88a)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis18.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
 ---
 
@@ -161,7 +186,7 @@ write_verilog -noattr /home/ananya123/VSDBabySoCC/VSDBabySoC/output/post_synth_s
 ### **Step 1: Compile the Testbench**
 Run the following `iverilog` command to compile the testbench:
 ```bash
-iverilog -o /home/ananya123/VSDBabySoCC/VSDBabySoC/output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I /home/ananya123/VSDBabySoCC/VSDBabySoC/src/include -I /home/ananya123/VSDBabySoCC/VSDBabySoC/src/module /home/ananya123/VSDBabySoCC/VSDBabySoC/src/module/testbench.v
+iverilog -o ./output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I ./src/include -I ./src/module ./src/module/testbench.v
 ```
 ---
 ### **Step 2: Navigate to the Post-Synthesis Simulation Output Directory**
