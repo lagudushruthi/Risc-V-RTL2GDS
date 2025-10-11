@@ -206,7 +206,8 @@ for {set i 1} {$i <= [array size list_of_lib_files]} {incr i} {
 
 ---
 
-| 🧩 **Command**            | 🧭 **Purpose**       | 🧠 **Explanation**                                |
+
+|  **Command**             |  **Purpose**          | **Explanation**                                |
 | ------------------------- | -------------------- | ------------------------------------------------- |
 | `report_worst_slack -max` | Worst Setup Slack    | Finds the **most negative setup slack (WNS)**     |
 | `report_worst_slack -min` | Worst Hold Slack     | Finds the **most negative hold slack**            |
@@ -215,13 +216,15 @@ for {set i 1} {$i <= [array size list_of_lib_files]} {incr i} {
 
 ---
 
-### 🐳 **Run the Automated Script**
+
+### **Run the Automated Script**
 
 ```shell
 docker run -it -v $HOME:/data opensta /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/sta_across_pvt.tcl
 ```
 
-📂 **Generated Output Directory:**
+
+**Generated Output Directory:**
 
 ```shell
 vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/STA_OUTPUT$ ls
@@ -232,7 +235,7 @@ sta_tns.txt
 sta_wns.txt
 ```
 
-| 🗂️ **File Name**         | 📘 **Description**                         |
+| **File Name**             | **Description**                         |
 | ------------------------- | ------------------------------------------ |
 | `min_max_<lib>.txt`       | Detailed timing report for each PVT corner |
 | `sta_worst_max_slack.txt` | Worst setup slack across corners           |
