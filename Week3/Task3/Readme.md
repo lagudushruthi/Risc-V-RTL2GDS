@@ -1,19 +1,19 @@
 ## Installation of OpenSTA
 
-### **1️⃣ Clone the Repository**
+### **Clone the Repository**
 
 ```bash
 git clone https://github.com/parallaxsw/OpenSTA.git
 cd OpenSTA
 ```
 
-### **2️⃣ Build the Docker Image**
+### **Build the Docker Image**
 
 ```bash
 docker build --file Dockerfile.ubuntu22.04 --tag opensta .
 ```
 
-### **3️⃣ Run the OpenSTA Container**
+### **Run the OpenSTA Container**
 
 ```bash
 docker run -i -v $HOME:/data opensta
@@ -28,7 +28,7 @@ docker run -i -v $HOME:/data opensta
 
 ---
 
-## 🧩 **1. Prepare Required Files**
+## **1. Prepare Required Files**
 
 ```bash
 # Create a directory to store Liberty timing libraries
@@ -42,35 +42,37 @@ avsddac.lib  avsdpll.lib  sky130_fd_sc_hd__tt_025C_1v80.lib
 gcd_sky130hd.sdc  vsdbabysoc_synthesis.sdc  vsdbabysoc.synth.v
 ```
 
-📦 **File Overview**
 
-* 🧱 **Standard Cell Library:** `sky130_fd_sc_hd__tt_025C_1v80.lib`
-* ⚙️ **IP-Specific Libraries:** `avsdpll.lib`, `avsddac.lib`
-* 🧠 **Synthesized Netlist:** `vsdbabysoc.synth.v`
-* ⏱️ **Timing Constraints:** `vsdbabysoc_synthesis.sdc`
+**File Overview**
+
+*  **Standard Cell Library:** `sky130_fd_sc_hd__tt_025C_1v80.lib`
+*  **IP-Specific Libraries:** `avsdpll.lib`, `avsddac.lib`
+*  **Synthesized Netlist:** `vsdbabysoc.synth.v`
+*  **Timing Constraints:** `vsdbabysoc_synthesis.sdc`
 
 ---
 
-## 🕒 **2. Run Min/Max Delay Timing Checks**
+
+## **2. Run Min/Max Delay Timing Checks**
 
 Below is the TCL script to perform **complete min/max timing analysis** on the SoC:
 
-📜 vsdbabysoc_min_max_delays.tcl
+vsdbabysoc_min_max_delays.tcl
 
 ```shell
 read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
 
-read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
-read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
+read_liberty -min /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
+read_liberty -max /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
 
-read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
-read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
+read_liberty -min /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
+read_liberty -max /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
 
-read_verilog /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySOC/vsdbabysoc.synth.v
+read_verilog /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySOC/vsdbabysoc.synth.v
 link_design vsdbabysoc
 
-read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySOC/vsdbabysoc_synthesis.sdc
+read_sdc /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySOC/vsdbabysoc_synthesis.sdc
 
 report_checks
 ```
@@ -89,7 +91,7 @@ report_checks
 ### **Execute Inside Docker**
 
 ```bash
-docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_min_max_delays.tcl
+docker run -it -v $HOME:/data opensta /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_min_max_delays.tcl
 ```
 
 ---
@@ -99,9 +101,9 @@ docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/Bab
 If you encounter this error:
 
 ```shell
-Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
-Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library already exists.
-Error: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, syntax error
+Warning: /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
+Warning: /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library already exists.
+Error: /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, syntax error
 ```
 
 🧠 **Cause:**
@@ -216,13 +218,13 @@ for {set i 1} {$i <= [array size list_of_lib_files]} {incr i} {
 ### 🐳 **Run the Automated Script**
 
 ```shell
-docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/sta_across_pvt.tcl
+docker run -it -v $HOME:/data opensta /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/sta_across_pvt.tcl
 ```
 
 📂 **Generated Output Directory:**
 
 ```shell
-/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/STA_OUTPUT$ ls
+vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/STA_OUTPUT$ ls
 min_max_sky130_fd_sc_hd__ss_100C_1v80.lib.txt
 sta_worst_max_slack.txt
 sta_worst_min_slack.txt
@@ -239,3 +241,5 @@ sta_wns.txt
 | `sta_wns.txt`             | Worst Negative Slack summary               |
 
 ---
+
+
