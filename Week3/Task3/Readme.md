@@ -106,7 +106,7 @@ Warning: /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd_
 Error: /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, syntax error
 ```
 
-🧠 **Cause:**
+**Cause:**
 Liberty format doesn’t allow `//` for comments — it must use `/* ... */`.
 
 ❌ Incorrect:
@@ -154,7 +154,7 @@ STA is performed across **Process–Voltage–Temperature (PVT)** corners to ens
 * `ff_HighTemp_HighVolt`
   Represent **fastest** operating conditions.
 
-## 🧠 **5. Automated STA Across All PVT Corners**
+## **5. Automated STA Across All PVT Corners**
 
 sta_across_pvt.tcl
 
@@ -204,7 +204,6 @@ for {set i 1} {$i <= [array size list_of_lib_files]} {incr i} {
     report_wns -digits {4} >> /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/STA_OUTPUT/sta_wns.txt
 }
 
----
 ```
 
 
@@ -244,4 +243,9 @@ sta_wns.txt
 
 ---
 
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task3/sta_output.PNG" 
+       alt="SoC design flow" width="600"/>
+</p>
 
