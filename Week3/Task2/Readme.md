@@ -47,7 +47,7 @@ In a digital circuit, signals are transferred along defined paths connecting seq
 - **Required Arrival Time (RAT):** The deadline the signal must meet based on clock periods and constraints.
 - **Slack:**  
   \[
-  \text{Slack} = \text{Required Arrival Time} - \text{Actual Arrival Time}
+  {Slack} = {Required Arrival Time} - {Actual Arrival Time}
   \]
   - Positive: Safe.
   - Negative: Timing failure, must be fixed.
@@ -115,15 +115,15 @@ In a digital circuit, signals are transferred along defined paths connecting seq
 
 - **Slack:**  
   \[
-    \text{Slack} = \text{Required Arrival Time} - \text{Actual Arrival Time}
+    {Slack} = {Required Arrival Time} - {Actual Arrival Time}
   \]
 - **Setup Slack:**  
   \[
-    \text{Setup Slack} = \text{Clock Period} - (\text{Data Arrival Time} + \text{Setup Time})
+    {Setup Slack} = {Clock Period} - ({Data Arrival Time} + {Setup Time})
   \]
 - **Hold Slack:**  
   \[
-    \text{Hold Slack} = \text{Data Arrival Time} - (\text{Clock Edge} + \text{Hold Time})
+    {Hold Slack} = {Data Arrival Time} - ({Clock Edge} + {Hold Time})
   \]
 
 ---
@@ -153,4 +153,3 @@ In a digital circuit, signals are transferred along defined paths connecting seq
 
 ---
 
-These notes give a theoretical and practical lens to study and apply STA in real digital design projects, making the world of VLSI timing both accessible and actionable.
