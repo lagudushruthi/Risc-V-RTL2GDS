@@ -60,8 +60,8 @@ Below is the TCL script to perform **complete min/max timing analysis** on the S
 vsdbabysoc_min_max_delays.tcl
 
 ```shell
-read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -min /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -max /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 read_liberty -min /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
 read_liberty -max /data/vsd/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
