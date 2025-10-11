@@ -200,6 +200,7 @@ cd output/post_synth_sim/
        alt="Synthesis" width="600"/>
 </p>
 ---
+
 ### **Step 4: View the Waveforms in GTKWave**
 
 ```bash
