@@ -215,8 +215,6 @@ for {set i 1} {$i <= [array size list_of_lib_files]} {incr i} {
 | `report_tns`              | Total Negative Slack | Sums all violations (indicates design robustness) |
 | `report_wns`              | Worst Negative Slack | Shows single **worst-case violation**             |
 
----
-
 
 ### **Run the Automated Script**
 
