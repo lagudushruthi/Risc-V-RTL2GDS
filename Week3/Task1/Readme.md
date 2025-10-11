@@ -29,7 +29,7 @@ yosys
 ```
 
 <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/synthesis1.PNG" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis1.PNG" 
        alt="Synthesis1" width="600"/>
 </p>
 
