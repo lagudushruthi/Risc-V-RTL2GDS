@@ -36,27 +36,39 @@ yosys
 
 Inside the Yosys shell, run:
 ```yosys
-read_verilog /home/ananya123/VSDBabySoCC/VSDBabySoC/src/module/vsdbabysoc.v
-read_verilog -I /home/ananya123/VSDBabySoCC/VSDBabySoC/src/include /home/ananya123/VSDBabySoCC/src/module/rvmyth.v
-read_verilog -I /home/ananya123/VSDBabySoCC/VSDBabySoC/src/include /home/ananya123/VSDBabySoCC/src/module/clk_gate.v
+read_verilog ./src/module/vsdbabysoc.v
+read_verilog -I ./src/include ./src/module/rvmyth.v
+read_verilog -I ./src/include ./src/module/clk_gate.v
 
 ```
-![WhatsApp Image 2024-11-16 at 5 54 12 AM](https://github.com/user-attachments/assets/648dc511-7c3c-496a-97c7-a24aa6cb0bae)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis2.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
-![WhatsApp Image 2024-11-16 at 5 20 29 AM (2)](https://github.com/user-attachments/assets/6db87310-6389-4f7c-9418-40e4f6780c18)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis3.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
-![WhatsApp Image 2024-11-16 at 5 20 29 AM (1)](https://github.com/user-attachments/assets/8eddf6c8-c3fb-44d9-b804-5eb836558c44)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis4.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
 ---
 
 ### **Step 2: Load the Liberty Files for Synthesis**
 Inside the same Yosys shell, run:
 ```yosys
-read_liberty -lib /home/ananya123/VSDBabySoCC/VSDBabySoC/src/lib/avsdpll.lib
-read_liberty -lib /home/ananya123/VSDBabySoCC/VSDBabySoC/src/lib/avsddac.lib
-read_liberty -lib /home/ananya123/VSDBabySoCC/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ./src/lib/avsdpll.lib
+read_liberty -lib ./src/lib/avsddac.lib
+read_liberty -lib ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
-![WhatsApp Image 2024-11-16 at 5 20 29 AM](https://github.com/user-attachments/assets/2ec505bd-8004-415f-ba9c-3b76a41562f8)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis4.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 
 ---
 
