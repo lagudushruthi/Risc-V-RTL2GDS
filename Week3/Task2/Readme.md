@@ -1,7 +1,4 @@
-# VSD - Static Timing Analysis (STA) README
-
-This README delivers a deep, theoretical, and practical understanding of Static Timing Analysis (STA) using insights from the Udemy course, practical examples, and clear definitions. The content is structured to guide new learners step-by-step, fostering both conceptual clarity and practical know-how.
-
+# VSD - Static Timing Analysis (STA) 
 ---
 
 ## Table of Contents
