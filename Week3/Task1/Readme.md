@@ -1,4 +1,4 @@
-# GLS OF BABYSOC
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/312c8459-e281-4d74-8c51-0e7282b53cfd" /># GLS OF BABYSOC
 ## POST-SYNTHESIS SIMULATION
 
 ### Purpose of GLS:
@@ -163,10 +163,6 @@ stat
        alt="Synthesis" width="600"/>
 </p>
 
-<p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis17.PNG" 
-       alt="Synthesis" width="600"/>
-</p>
 ---
 
 ### **Step 8: Write the Synthesized Netlist**
@@ -174,7 +170,7 @@ stat
 write_verilog -noattr ./output/post_synth_sim/vsdbabysoc.synth.v
 ```
 <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis18.PNG" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis17.PNG" 
        alt="Synthesis" width="600"/>
 </p>
 
@@ -199,6 +195,10 @@ cd output/post_synth_sim/
 ```bash
 ./post_synth_sim.out
 ```
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis18.PNG" 
+       alt="Synthesis" width="600"/>
+</p>
 ---
 ### **Step 4: View the Waveforms in GTKWave**
 
@@ -206,9 +206,13 @@ cd output/post_synth_sim/
 gtkwave post_synth_sim.vcd
 ```
 ---
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis_waveform1.png" 
+       alt="Synthesis" width="600"/>
+</p>
 
-![WhatsApp Image 2024-11-25 at 9 07 01 PM](https://github.com/user-attachments/assets/9d79b832-7315-46ed-b028-e2dd5d14d27a)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/Task1/synthesis_waveform2.png" 
+       alt="Synthesis" width="600"/>
+</p>
 
-![WhatsApp Image 2024-11-25 at 9 07 01 PM (2)](https://github.com/user-attachments/assets/0a6d272d-1aae-45b5-b6aa-914a0087df84)
-
-![WhatsApp Image 2024-11-25 at 9 07 01 PM (1)](https://github.com/user-attachments/assets/239557c2-2447-4cd1-a18f-fb1966feebf2)
