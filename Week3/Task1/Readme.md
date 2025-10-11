@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/312c8459-e281-4d74-8c51-0e7282b53cfd" /># GLS OF BABYSOC
+# GLS OF BABYSOC
 ## POST-SYNTHESIS SIMULATION
 
 ### Purpose of GLS:
