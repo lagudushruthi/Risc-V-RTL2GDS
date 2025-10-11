@@ -138,6 +138,9 @@ Fixing this syntax will resolve the parsing error and allow OpenSTA to continue 
        alt="SoC design flow" width="600"/>
 </p>
 
+ - Positive slack of 2.16 means timing requirements are met (setup check is successful).
+
+
 ## **4. VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)**
 
 STA is performed across **Process–Voltage–Temperature (PVT)** corners to ensure robustness under all conditions.
