@@ -28,7 +28,10 @@ Here is the step-by-step execution plan for running the  commands manually:
 yosys
 ```
 
-![WhatsApp Image 2024-11-16 at 5 20 29 AM (4)](https://github.com/user-attachments/assets/69c01da4-592e-4165-afcf-d42eb0eab08c)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week3/synthesis1.PNG" 
+       alt="Synthesis1" width="600"/>
+</p>
 
 
 Inside the Yosys shell, run:
