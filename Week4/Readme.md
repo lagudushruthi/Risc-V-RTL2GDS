@@ -26,9 +26,7 @@ We explore **static and dynamic characteristics, switching behavior, noise margi
 
 ### ✅ Day4 – Noise Margin
 - VOH, VOL, VIH, VIL extraction
-- dVout/dVin = –1 method
 - NML & NMH calculation
-- Effect of imbalance on noise immunity
 
 ### ✅ Day5 – Robustness Analysis
 **(a) Power Supply Variation**
