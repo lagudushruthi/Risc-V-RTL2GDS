@@ -9,7 +9,7 @@ We explore **static and dynamic characteristics, switching behavior, noise margi
 
 | Day | Topic | Key Focus |
 |----|-------------------------------|-------------------------------|
-| [Day1](./Day1 ) | NMOS Id–Vds Characteristics | Linear & Saturation regions, channel length modulation, SPICE simulation |
+| [Day1](./Week4/Day1) | NMOS Id–Vds Characteristics | Linear & Saturation regions, channel length modulation, SPICE simulation |
 | [Day2](./Day2) | Velocity Saturation & Basic VTC | Short-channel effects, PMOS vs NMOS load line, CMOS VTC construction |
 | [Day3](./Day3/Readme.md) | CMOS Switching Threshold & Dynamic Behavior | Vm calculation, delay analysis, rise/fall symmetry |
 | [Day4](./Day4/Readme.md) | CMOS Noise Margin Evaluation | VOH, VOL, VIH, VIL, NML, NMH using VTC slope method |
