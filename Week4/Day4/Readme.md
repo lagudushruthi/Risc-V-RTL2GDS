@@ -66,3 +66,16 @@ Amount of noise the **LOW output** can tolerate:
 </p>
 
 
+### From the Graph:
+
+Low noise margin = VIL – VOL = 0.766-0.130
+
+Low noise margin = 0.636
+
+
+High noise margin = VOH – VIH = 1.732-0.969
+
+High noise margin = 0.754
+
+
+
