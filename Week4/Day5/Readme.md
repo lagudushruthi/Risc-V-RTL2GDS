@@ -42,6 +42,12 @@ Higher gain = sharper switching = better noise margin.
        alt="day5 sv gain" width="600"/>
 </p>
 
+Gain (at 1.8V)= (1.726-0.138)/(0.965-0.762)
+
+Gain (at 1.8V)= 7.82
+
+At 1v the gain starts decreasing as there is no enough supply voltage to drive the transistors ON.
+
 
 ## 2. Device Variation (Transistor Sizing) and Its Effect on Switching Threshold (Vm)
 
@@ -75,6 +81,9 @@ The switching threshold Vm determines:
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 dv switching threshold.png" 
        alt="day5 switching threshold" width="600"/>
 </p> 
+
+
+Switching threshold is approx 0.98.
 
 ### Optimal Design
 For a **balanced inverter**:
