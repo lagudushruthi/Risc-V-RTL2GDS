@@ -109,7 +109,7 @@ Where:
 
 The denominator term reduces current when Vds is high, causing early current saturation.
 
-### 4.3 Comparison (from slides)
+### 4.3 Comparison 
 
 | Behavior | Long-Channel | Short-Channel |
 |----------|--------------|----------------|
