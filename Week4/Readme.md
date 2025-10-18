@@ -9,42 +9,42 @@ We explore **static and dynamic characteristics, switching behavior, noise margi
 
 | Day | Topic | Key Focus |
 |----|-------------------------------|-------------------------------|
-| [Day 1](./Day1/Readme.md) | NMOS Id–Vds Characteristics | Linear & Saturation regions, channel length modulation, SPICE simulation |
-| [Day 2](./Day2/Readme.md) | Velocity Saturation & Basic VTC | Short-channel effects, PMOS vs NMOS load line, CMOS VTC construction |
-| [Day 3](./Day3/Readme.md) | CMOS Switching Threshold & Dynamic Behavior | Vm calculation, delay analysis, rise/fall symmetry |
-| [Day 4](./Day4/Readme.md) | CMOS Noise Margin Evaluation | VOH, VOL, VIH, VIL, NML, NMH using VTC slope method |
-| [Day 5](./Day5/Readme.md) | Power Supply & Device Variation Robustness | VDD variation → gain, W/L variation → switching threshold shift |
+| [Day1](./Day1/Readme.md) | NMOS Id–Vds Characteristics | Linear & Saturation regions, channel length modulation, SPICE simulation |
+| [Day2](./Day2/Readme.md) | Velocity Saturation & Basic VTC | Short-channel effects, PMOS vs NMOS load line, CMOS VTC construction |
+| [Day3](./Day3/Readme.md) | CMOS Switching Threshold & Dynamic Behavior | Vm calculation, delay analysis, rise/fall symmetry |
+| [Day4](./Day4/Readme.md) | CMOS Noise Margin Evaluation | VOH, VOL, VIH, VIL, NML, NMH using VTC slope method |
+| [Day5](./Day5/Readme.md) | Power Supply & Device Variation Robustness | VDD variation → gain, W/L variation → switching threshold shift |
 
 ---
 
 ## 🔍 What You Will Learn in Week 4
 
-### ✅ Day 1 – NMOS Drain Characteristics
+### ✅ Day1 – NMOS Drain Characteristics
 - Id vs Vds (linear & saturation)
 - First-order equation derivation
 - Channel length modulation (λ)
 - Sky130 NMOS SPICE simulation
 
-### ✅ Day 2 – Velocity Saturation & CMOS VTC
+### ✅ Day2 – Velocity Saturation & CMOS VTC
 - Why short-channel devices deviate (VSAT)
 - Load-line method (NMOS & PMOS)
 - CMOS inverter VTC curve construction
 - Vin vs Vout static behavior
 
-### ✅ Day 3 – Switching Threshold (Vm) & Delay
+### ✅ Day3 – Switching Threshold (Vm) & Delay
 - Condition: Id_NMOS = Id_PMOS
 - Vm = point where Vin = Vout
 - Analytical Vm formula
 - Rise/Fall delay comparison
 - Balanced inverter design (Wp/Wn ratio)
 
-### ✅ Day 4 – Noise Margin
+### ✅ Day4 – Noise Margin
 - VOH, VOL, VIH, VIL extraction
 - dVout/dVin = –1 method
 - NML & NMH calculation
 - Effect of imbalance on noise immunity
 
-### ✅ Day 5 – Robustness Analysis
+### ✅ Day5 – Robustness Analysis
 **(a) Power Supply Variation**
 - VDD sweep
 - Gain ∝ VDD
