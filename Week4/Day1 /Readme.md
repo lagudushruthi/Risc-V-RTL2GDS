@@ -335,6 +335,16 @@ To simulate NMOS behavior realistically, SPICE uses **foundry-provided transisto
 
 ## steps for ngspice
 
+git clone https://github.com/kunalg123/sky130CircuitDesignWorkshop/
+
+cd sky130CircuitDesignWorkshop/design/
+
+vim day1_nfet_idvds_L2_W5.spice
+
+ngspice day1_nfet_idvds_L2_W5.spice
+
+plot -vdd#branch
+
 <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day1 /Images/cloning.png" 
        alt="cloning" width="600"/>
