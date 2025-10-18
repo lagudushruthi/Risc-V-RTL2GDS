@@ -60,6 +60,16 @@ This repository documents my **week-by-week progress** with tasks inside each we
 * Successfully verified **functional consistency** between RTL and gate-level netlists using **pre- and post-synthesis simulations**, ensuring correct BabySoC operation after technology mapping.
 * Gained a practical understanding of **Static Timing Analysis (STA)** and the **OpenROAD flow**, including timing constraints, optimization, and automated ASIC design processes.
 * Performed **corner timing analysis** across multiple PDK corners (TT, SS, FF), extracting and interpreting metrics like **WNS, TNS, worst slack, worst hold, and setup slack**, providing insights into timing robustness of the design.
+* 
+
+| Task       | Description                                                                 | Status |
+| ---------- | --------------------------------------------------------------------------- | ------ |
+| [**Day1**](Week4) | NMOS Id–Vds Characteristics | Linear & Saturation regions, channel length modulation, SPICE simulation| ✅ Done |
+| [**Day2**](Week4) |Velocity Saturation & Basic VTC | Short-channel effects, PMOS vs NMOS load line, CMOS VTC construction          | ✅ Done |
+| [**Day3**](Week4) | CMOS Switching Threshold & Dynamic Behavior | Vm calculation, rise/fall delay                       | ✅ Done |
+| [**Day4**](Week4) | CMOS Noise Margin Evaluation | VOH, VOL, VIH, VIL, NML, NMH using VTC slope method                        | ✅ Done |
+| [**Day5**](Week4) | Power Supply & Device Variation Robustness | VDD variation → gain, W/L variation → switching threshold shift                           | ✅ Done |
+
 
 ## 🙏 Acknowledgment  
 
