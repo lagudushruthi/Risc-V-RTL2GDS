@@ -56,6 +56,11 @@ Amount of noise the **LOW output** can tolerate:
 </p>
 
 <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day4/day4 graph.png" 
+       alt="day4 graph" width="600"/>
+</p>
+
+<p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day4/day4 noise margin.png" 
        alt="day4 noise margin" width="600"/>
 </p>
