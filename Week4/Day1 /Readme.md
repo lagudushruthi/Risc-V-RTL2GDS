@@ -362,6 +362,11 @@ plot -vdd#branch
        alt="day1" width="600"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day1 /Images/ngspice terminal.png" 
+       alt="day1" width="600"/>
+</p>
+
 
 
 
