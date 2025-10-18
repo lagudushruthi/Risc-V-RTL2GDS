@@ -114,6 +114,55 @@ To maintain:
 
 ---
 
+## 10. Labs
+
+### CMOS inverter
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 terminal.png" 
+       alt="day3 terminal" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 cmos inv.png" 
+       alt="day3 cmos inv" width="600"/>
+</p>
+
+### Transient analysis
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 trans terminal.png" 
+       alt="day3 trans terminal" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 trans.png" 
+       alt="day3 trans" width="600"/>
+</p>
+
+### Rise time delay
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 rise delay.png" 
+       alt="day3 rise delay" width="600"/>
+</p>
+
+### Fall time delay
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 fall delay.png" 
+       alt="day3 fall delay" width="600"/>
+</p>
+
+### Switching threshold
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 switching threshold.png" 
+       alt="day3 switching threshold" width="600"/>
+</p>
+
+
+
+
 
 
 
