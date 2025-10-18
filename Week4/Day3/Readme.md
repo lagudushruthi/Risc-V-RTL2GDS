@@ -146,12 +146,16 @@ To maintain:
        alt="day3 rise delay" width="600"/>
 </p>
 
+Rise time delay = 1.332
+
 ### Fall time delay
 
 <p align="center">
   <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day3/day3 fall delay.png" 
        alt="day3 fall delay" width="600"/>
 </p>
+
+Fall time delay = 0.285
 
 ### Switching threshold
 
