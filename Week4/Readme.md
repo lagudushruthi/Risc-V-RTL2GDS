@@ -5,7 +5,7 @@ We explore **static and dynamic characteristics, switching behavior, noise margi
 
 ## 🔍 What we Will Learn in Week 4
 
-### ✅ [Day1: NMOS Drain Characteristics]( ./Day1)
+### ✅ Day1: NMOS Drain Characteristics
 - Id vs Vds (linear & saturation)
 - First-order equation derivation
 - Channel length modulation (λ)
