@@ -347,6 +347,11 @@ To simulate NMOS behavior realistically, SPICE uses **foundry-provided transisto
        alt="day1" width="600"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day1 /Images/ngspice graph.png" 
+       alt="day1" width="600"/>
+</p>
+
 
 
 
