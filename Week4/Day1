@@ -1,1 +1,69 @@
+# Day 1 – NMOS Id vs Vds Characteristics (Sky130, SPICE Simulation)
+1️⃣ Introduction to Circuit Design and SPICE Simulations
 
+In VLSI design, understanding transistor behavior is crucial for building digital and analog circuits. Before fabricating a chip, engineers simulate circuits using SPICE (Simulation Program with Integrated Circuit Emphasis) to verify functionality and performance.
+✅ Why Circuit Design?
+
+Real-world circuits use MOSFETs (NMOS/PMOS) as switches or amplifiers.
+Engineers must know how current flows with different voltages.
+Simulation helps predict behavior without physical hardware.
+
+✅ Why SPICE Simulations?
+
+SPICE allows us to:
+Analyze DC, AC, and Transient characteristics.
+Model real transistor behavior using foundry data.
+Test different bias conditions safely.
+Measure parameters like Id, Vt, gm, ro, etc.
+
+✅ Basic SPICE Flow
+
+Write Netlist (circuit description in text)
+Include Technology/Model File (.lib or .model)
+Specify simulation commands
+Run simulation
+Plot and analyze results
+
+✅ In Day 1, our goal is to understand how NMOS drain current (Id) changes with Vds under different Vgs values, both theoretically and using SPICE.
+
+2️⃣ NMOS Structure & 4-Terminal Device
+An NMOS (N-Channel MOSFET) is the fundamental building block of digital IC design. It acts as a voltage-controlled current device.
+It consists of:
+A p-type substrate
+Two n+ diffusion regions → Source & Drain
+A thin SiO₂ (oxide) layer
+A Gate terminal on top of the oxide
+
+✅ Physical Structure (Conceptual View)
+
+
+✅ The Four Terminals of MOSFET
+| Terminal  | Symbol | Function                                       |
+| --------- | ------ | ---------------------------------------------- |
+| Gate      | G      | Controls channel formation (voltage input)     |
+| Source    | S      | Where carriers (electrons) enter               |
+| Drain     | D      | Where carriers leave                           |
+| Body/Bulk | B      | Substrate (usually connected to Source or GND) |
+
+✅ Default Biasing in NMOS
+
+Source (S): Ground (0V)
+Body (B): Ground (to avoid body effect)
+Gate (G): Positive voltage (Vgs)
+Drain (D): Positive voltage (Vds)
+
+✅ NMOS Conduction Mechanism
+
+When Vgs < Vt → MOSFET OFF (No channel)
+When Vgs = Vt → Channel just forms (weak inversion)
+When Vgs > Vt → Strong inversion → Electrons form n-type channel → Current flows from Drain to Source if Vds > 0
+
+📌 Important: Electrons flow from Source to Drain, but current Id is defined from Drain to Source.
+
+✅ PMOS (for reference)
+
+Built in n-substrate
+Diffusion: p+ regions
+Gate voltage must be negative
+Carriers: Holes
+Works opposite to NMOS
