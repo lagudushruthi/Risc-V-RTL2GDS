@@ -320,7 +320,7 @@ Why?
 
 ---
 
-## Lab Screenshots & Graphs
+## 7. Lab Screenshots & Graphs
 
 To simulate NMOS behavior realistically, SPICE uses **foundry-provided transistor models**.
 
