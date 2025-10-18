@@ -62,6 +62,7 @@ This repository documents my **week-by-week progress** with tasks inside each we
 * Performed **corner timing analysis** across multiple PDK corners (TT, SS, FF), extracting and interpreting metrics like **WNS, TNS, worst slack, worst hold, and setup slack**, providing insights into timing robustness of the design.
 * 
 
+### Week 4 – CMOS Inverter Characteristics & Robustness (Sky130 + Ngspice)
 | Task       | Description                                                                 | Status |
 | ---------- | --------------------------------------------------------------------------- | ------ |
 | [**Day1**](Week4) | NMOS Id–Vds Characteristics | Linear & Saturation regions, channel length modulation, SPICE simulation| ✅ Done |
