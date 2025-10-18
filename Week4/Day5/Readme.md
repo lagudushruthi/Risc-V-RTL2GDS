@@ -27,6 +27,22 @@ Higher gain = sharper switching = better noise margin.
 
 ---
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 supply variation terminal.png" 
+       alt="day5 supply variation terminal" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 sv.png" 
+       alt="day5 sv" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 sv gain.png" 
+       alt="day5 sv gain" width="600"/>
+</p>
+
+
 ## 2. Device Variation (Transistor Sizing) and Its Effect on Switching Threshold (Vm)
 
 ### Why Device Variation Matters
@@ -44,6 +60,21 @@ The switching threshold Vm determines:
 - Symmetry of VTC curve
 - Balance between rise and fall delay
 - Noise margin on both logic levels
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 device variation terminal.png" 
+       alt="day5 device variation terminal" width="600"/>
+</p> 
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 dv graph.png" 
+       alt="day5 dv graph" width="600"/>
+</p>
+
+ <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 dv switching threshold.png" 
+       alt="day5 switching threshold" width="600"/>
+</p> 
 
 ### Optimal Design
 For a **balanced inverter**:
