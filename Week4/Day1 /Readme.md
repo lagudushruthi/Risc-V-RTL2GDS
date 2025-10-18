@@ -19,12 +19,7 @@ This document provides a complete theoretical and practical understanding of how
 4. [NMOS Resistive (Linear) & Saturation Regions of Operation](#4-nmos-resistive-linear--saturation-regions-of-operation)  
 5. [First-Order Derivation of Id vs Vds](#5-first-order-derivation-of-id-vs-vds)  
 6. [Channel Length Modulation (λ)](#6-channel-length-modulation-λ)  
-7. [SPICE Setup & Model Parameters (Sky130)](#7-spice-setup--model-parameters-sky130)  
-8. [SPICE Netlist Explanation](#8-spice-netlist-explanation)  
-9. [Simulation Commands (.op, .dc)](#9-simulation-commands-op-dc)  
-10. [Simulation Output & Interpretation (Id–Vds Curves)](#10-simulation-output--interpretation-idvds-curves)  
-11. [Observations & Key Learnings](#11-observations--key-learnings)  
-12. [Optional: Lab Screenshots & Graphs](#12-optional-lab-screenshots--graphs)
+7. [Lab Screenshots & Graphs](#8-optional-lab-screenshots--graphs)
 
 ---
 
@@ -325,12 +320,12 @@ Why?
 
 ---
 
-## 7. SPICE Setup & Model Parameters (Sky130)
+## Lab Screenshots & Graphs
 
 To simulate NMOS behavior realistically, SPICE uses **foundry-provided transistor models**.
 
 ### ✅ What the model file contains:
-- Threshold voltage (Vt)
+
 - Mobility (μn)
 - Oxide capacitance (Cox)
 - Body effect parameters (γ, φf)
@@ -338,15 +333,22 @@ To simulate NMOS behavior realistically, SPICE uses **foundry-provided transisto
 - Short-channel effects
 - Parasitics, leakage, etc.
 
-### ✅ Typical inclusion in SPICE:
-`.lib "sky130_fd_pr/models/sky130.lib.spice" tt`
+## steps for ngspice
 
-`tt` = Typical-Typical (standard process corner)
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day1/Images/cloning.png" 
+       alt="cloning" width="600"/>
+</p>
 
-✅ After including the model, we can instantiate the NMOS using:
-`sky130_fd_pr__nfet_01v8`
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day1/Images/day1.png" 
+       alt="day1" width="600"/>
+</p>
 
----
+
+
+
+
 
 
 
