@@ -226,7 +226,7 @@ To simulate realistic MOSFET behavior (including velocity saturation), we must i
 
 ## 10. SPICE Netlist Explanation (Id–Vgs & Id–Vds)
 
-We perform two main simulations:
+We perform two main simulations: Id–Vgs & Id–Vds
 
 ### 10.1 Id–Vgs (to extract threshold voltage Vt)
 - Vds is set to a constant value (e.g., 1.8V)
@@ -234,11 +234,37 @@ We perform two main simulations:
 - Plot Id vs Vgs
 - Vt ≈ the point where Id starts to rise significantly
 
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day2/day2 id_vgs terminal.png" 
+       alt="day2 id_vgs terminal" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day2/day2 id_vgs graph.png" 
+       alt="day2 id_vgs terminal" width="600"/>
+</p>
+
 ### 10.2 Id–Vds (to observe velocity saturation)
 - Vin (Vgs) is set to multiple values (e.g., 0.8V, 1.0V, 1.2V, 1.4V, 1.6V, 1.8V)
 - Vds is swept from 0 to 1.8V
 - Plot Id vs Vds for each Vgs
 - Observe early saturation and flattening due to velocity saturation
+
+  <p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day2/day2.png" 
+       alt="day2" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day2/day2 id_vds.png" 
+       alt="day2 id_vgs terminal" width="600"/>
+</p>
+
+### Threshold voltage
+<p align="center">
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day2/day 2 vt.png" 
+       alt="day 2 vt" width="600"/>
+</p>
 
 ✅ These simulations confirm the theory of short-channel behavior.
 
