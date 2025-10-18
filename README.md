@@ -77,12 +77,6 @@ I am thankful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLS
 
 I also acknowledge the support of **RISC-V International**, **India Semiconductor Mission (ISM)**, **VLSI Society of India (VSI)**, and [**Efabless**](https://github.com/efabless) for making this initiative possible.  
 
-## 📈 **Weekly Progress Tracker**
-
-[![Week0](https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square)](week0)
-![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)(Week1)
-![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)(Week2)
-
 
 
 **🔗 Program Links:**
