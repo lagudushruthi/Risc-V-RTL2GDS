@@ -33,7 +33,7 @@ Higher gain = sharper switching = better noise margin.
 </p>
 
 <p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day5 sv graph.png" 
+  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week4/Day5/day 5 sv graph.png" 
        alt="day5 sv" width="600"/>
 </p>
 
