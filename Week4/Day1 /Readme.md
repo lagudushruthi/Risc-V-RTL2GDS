@@ -19,7 +19,7 @@ This document provides a complete theoretical and practical understanding of how
 4. [NMOS Resistive (Linear) & Saturation Regions of Operation](#4-nmos-resistive-linear--saturation-regions-of-operation)  
 5. [First-Order Derivation of Id vs Vds](#5-first-order-derivation-of-id-vs-vds)  
 6. [Channel Length Modulation (λ)](#6-channel-length-modulation-λ)  
-7. [Lab Screenshots & Graphs](#8-optional-lab-screenshots--graphs)
+7. [Lab Screenshots & Graphs](#7-lab-screenshots--graphs)
 
 ---
 
