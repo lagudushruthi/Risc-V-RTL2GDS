@@ -47,6 +47,19 @@ This repository documents my **week-by-week progress** with tasks inside each we
 | [**Task 1**](Week2) | 📘 Write-up on SoC fundamentals | ✅ Done |
 | [**Task 2**](Week2) | 📝 VSDBabySoC Pre synthesis Waveform  & explanations  | ✅ Done |
 
+## 📅 Week 3 — BabySoC Synthesis and Timing Analysis
+
+| Task   | Description                                                                                                                    | Status    |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------ | --------- |
+| [**Task1**](Week3) | ⚡ Pre- and Post-Synthesis Simulation for BabySoC using **Sky130 PDK**; compared RTL vs gate-level waveforms                    | ✅ Done    |
+| [**Task2**](Week3) | 📝 Short note on **Static Timing Analysis (STA)** and **OpenROAD** flow                                                        | ✅ Done    |
+| [**Task3**](Week3) | 📊 Corner timing analysis with **Sky130 PDK corners** (TT, SS, FF); plotted WNS, TNS, worst slack, worst hold, and setup slack | ✅ Done    |
+
+### 🌟 Key Learnings from Week 3
+
+* Successfully verified **functional consistency** between RTL and gate-level netlists using **pre- and post-synthesis simulations**, ensuring correct BabySoC operation after technology mapping.
+* Gained a practical understanding of **Static Timing Analysis (STA)** and the **OpenROAD flow**, including timing constraints, optimization, and automated ASIC design processes.
+* Performed **corner timing analysis** across multiple PDK corners (TT, SS, FF), extracting and interpreting metrics like **WNS, TNS, worst slack, worst hold, and setup slack**, providing insights into timing robustness of the design.
 
 ## 🙏 Acknowledgment  
 
@@ -56,9 +69,9 @@ I also acknowledge the support of **RISC-V International**, **India Semiconducto
 
 ## 📈 **Weekly Progress Tracker**
 
-[![Week0](https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square)](Week0)
-![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)
-![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)
+[![Week0](https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square)](week0)
+![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)(Week1)
+![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)(Week2)
 
 
 
