@@ -45,12 +45,6 @@ sudo ./setup.sh
 ./build_openroad.sh --local
 ```
 
-<p align="center">
-  <img src="https://github.com/lagudushruthi/Risc-V-RTL2GDS/blob/main/Week5/build.png" 
-       alt="build" width="600"/>
-</p>
-
-
 ### 4. Verify Installation
 
 ```bash
